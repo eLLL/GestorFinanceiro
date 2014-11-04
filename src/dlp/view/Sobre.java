@@ -1,4 +1,4 @@
-package me.dlp.view;
+package dlp.view;
 
 /**
  *

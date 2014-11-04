@@ -1,4 +1,4 @@
-package me.dlp.model;
+package dlp.model;
 
 enum Cor
 {

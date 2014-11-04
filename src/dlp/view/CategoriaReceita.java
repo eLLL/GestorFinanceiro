@@ -1,19 +1,20 @@
-package me.dlp.view;
+package dlp.view;
 
 /**
  *
  * @author USUARIO
  */
-public class CategoriaDespesa extends javax.swing.JFrame {
+public class CategoriaReceita extends javax.swing.JFrame {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 7184266755332975475L;
+	private static final long serialVersionUID = -841698998550882361L;
+
 	/**
-	 * Creates new form CategoriaDespesa
+	 * Creates new form CategoriaReceita
 	 */
-	public CategoriaDespesa() {
+	public CategoriaReceita() {
 		initComponents();
 	}
 
@@ -52,10 +53,10 @@ public class CategoriaDespesa extends javax.swing.JFrame {
 		jMenu5 = new javax.swing.JMenu();
 
 		setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-		setTitle("Gerenciador Financeiro - Categoria Despesa");
+		setTitle("Gerenciador Financeiro - Categoria Receita");
 
 		jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null,
-				"Nova Categoria de Despesa",
+				"Nova Categoria de Receita",
 				javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
 				javax.swing.border.TitledBorder.DEFAULT_POSITION,
 				new java.awt.Font("Tahoma", 0, 18))); // NOI18N
@@ -68,7 +69,8 @@ public class CategoriaDespesa extends javax.swing.JFrame {
 		jLabel2.setText("Cor");
 
 		jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] {
-				"Amarelo", "Azul", "Laranja", "Verde", "Vermelho" }));
+				"Amarelo", "Azul", "Branco", "Laranja", "Verde", "Vermelho",
+				"Preto", "Roxo" }));
 
 		javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(
 				jPanel2);
@@ -123,11 +125,11 @@ public class CategoriaDespesa extends javax.swing.JFrame {
 																javax.swing.GroupLayout.DEFAULT_SIZE,
 																javax.swing.GroupLayout.PREFERRED_SIZE)
 														.addComponent(jLabel1))
-										.addGap(18, 18, 18)
+										.addGap(21, 21, 21)
 										.addGroup(
 												jPanel2Layout
 														.createParallelGroup(
-																javax.swing.GroupLayout.Alignment.TRAILING)
+																javax.swing.GroupLayout.Alignment.BASELINE)
 														.addComponent(jLabel2)
 														.addComponent(
 																jComboBox1,
@@ -208,21 +210,15 @@ public class CategoriaDespesa extends javax.swing.JFrame {
 														.createParallelGroup(
 																javax.swing.GroupLayout.Alignment.LEADING)
 														.addComponent(
-																jPanel5,
+																jPanel2,
 																javax.swing.GroupLayout.DEFAULT_SIZE,
 																javax.swing.GroupLayout.DEFAULT_SIZE,
 																Short.MAX_VALUE)
-														.addGroup(
-																jPanel1Layout
-																		.createSequentialGroup()
-																		.addComponent(
-																				jPanel2,
-																				javax.swing.GroupLayout.PREFERRED_SIZE,
-																				javax.swing.GroupLayout.DEFAULT_SIZE,
-																				javax.swing.GroupLayout.PREFERRED_SIZE)
-																		.addGap(0,
-																				0,
-																				Short.MAX_VALUE)))));
+														.addComponent(
+																jPanel5,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																javax.swing.GroupLayout.DEFAULT_SIZE,
+																Short.MAX_VALUE))));
 		jPanel1Layout
 				.setVerticalGroup(jPanel1Layout
 						.createParallelGroup(
@@ -238,7 +234,7 @@ public class CategoriaDespesa extends javax.swing.JFrame {
 												javax.swing.GroupLayout.PREFERRED_SIZE)
 										.addPreferredGap(
 												javax.swing.LayoutStyle.ComponentPlacement.RELATED,
-												152, Short.MAX_VALUE)
+												149, Short.MAX_VALUE)
 										.addComponent(
 												jPanel5,
 												javax.swing.GroupLayout.PREFERRED_SIZE,
@@ -369,7 +365,8 @@ public class CategoriaDespesa extends javax.swing.JFrame {
 		getContentPane().setLayout(layout);
 		layout.setHorizontalGroup(layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addComponent(
-				jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE,
+				jPanel1, javax.swing.GroupLayout.Alignment.TRAILING,
+				javax.swing.GroupLayout.DEFAULT_SIZE,
 				javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
 		layout.setVerticalGroup(layout.createParallelGroup(
 				javax.swing.GroupLayout.Alignment.LEADING).addComponent(
@@ -517,19 +514,19 @@ public class CategoriaDespesa extends javax.swing.JFrame {
 			}
 		} catch (ClassNotFoundException ex) {
 			java.util.logging.Logger
-					.getLogger(CategoriaDespesa.class.getName()).log(
+					.getLogger(CategoriaReceita.class.getName()).log(
 							java.util.logging.Level.SEVERE, null, ex);
 		} catch (InstantiationException ex) {
 			java.util.logging.Logger
-					.getLogger(CategoriaDespesa.class.getName()).log(
+					.getLogger(CategoriaReceita.class.getName()).log(
 							java.util.logging.Level.SEVERE, null, ex);
 		} catch (IllegalAccessException ex) {
 			java.util.logging.Logger
-					.getLogger(CategoriaDespesa.class.getName()).log(
+					.getLogger(CategoriaReceita.class.getName()).log(
 							java.util.logging.Level.SEVERE, null, ex);
 		} catch (javax.swing.UnsupportedLookAndFeelException ex) {
 			java.util.logging.Logger
-					.getLogger(CategoriaDespesa.class.getName()).log(
+					.getLogger(CategoriaReceita.class.getName()).log(
 							java.util.logging.Level.SEVERE, null, ex);
 		}
 		// </editor-fold>
@@ -537,7 +534,7 @@ public class CategoriaDespesa extends javax.swing.JFrame {
 		/* Create and display the form */
 		java.awt.EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				new CategoriaDespesa().setVisible(true);
+				new CategoriaReceita().setVisible(true);
 			}
 		});
 	}
