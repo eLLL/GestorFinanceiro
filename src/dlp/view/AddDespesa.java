@@ -622,7 +622,7 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void textField5ActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_textField5ActionPerformed
-        // TODO add your handling code here:
+     // TODO add your handling code here:
 
     }// GEN-LAST:event_textField5ActionPerformed
 
@@ -634,7 +634,6 @@ public class AddDespesa extends javax.swing.JFrame
         // TODO add your handling code here:
     }// GEN-LAST:event_jButton2ActionPerformed
 
-    
     /**
      * Função ativada quando é clicado no botão salvar.
      * 
@@ -643,7 +642,7 @@ public class AddDespesa extends javax.swing.JFrame
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt)
     {
         Operacao op = new Operacao();
-        
+
         Manager.salvar(op);
     }
 
@@ -668,7 +667,7 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
+     // TODO add your handling code here:
     }// GEN-LAST:event_jTextField2ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt)
@@ -689,7 +688,7 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
+     // TODO add your handling code here:
     }// GEN-LAST:event_jTextField3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)
@@ -797,7 +796,7 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt)
     {// GEN-FIRST:event_jMenu4MouseClicked
-        // TODO add your handling code here:
+     // TODO add your handling code here:
         Sobre frame = new Sobre();
         frame.setVisible(true);
     }// GEN-LAST:event_jMenu4MouseClicked

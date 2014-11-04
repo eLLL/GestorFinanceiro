@@ -42,6 +42,5 @@ public class Fatura
     {
         this.dataVencimento = dataVencimento;
     }
-    
-    
+
 }
