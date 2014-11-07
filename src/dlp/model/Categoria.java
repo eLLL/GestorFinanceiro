@@ -1,10 +1,5 @@
 package dlp.model;
 
-enum Cor
-{
-    BRANCO, VERMELHO, AZUL, VERDE, ROXO, ROSA, AMARELO
-}
-
 public class Categoria
 {
     private int id;
