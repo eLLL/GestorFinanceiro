@@ -2,10 +2,6 @@ package dlp.model;
 
 import java.util.Calendar;
 
-enum Recorrencia
-{
-    DIA, SEMANA, MES, ANO
-}
 
 public class Operacao
 {
@@ -13,9 +9,6 @@ public class Operacao
     String descricao;
     Calendar data;
     Categoria categoria;
-    boolean recorrencia;
-    int tempoRecorrencia;
-    Recorrencia periodoRecorencia;
     boolean parcelamento;
     int numeroParcelas;
 
@@ -62,36 +55,6 @@ public class Operacao
     public void setCategoria(Categoria categoria)
     {
         this.categoria = categoria;
-    }
-
-    public boolean isRecorrencia()
-    {
-        return recorrencia;
-    }
-
-    public void setRecorrencia(boolean recorrencia)
-    {
-        this.recorrencia = recorrencia;
-    }
-
-    public int getTempoRecorrencia()
-    {
-        return tempoRecorrencia;
-    }
-
-    public void setTempoRecorrencia(int tempoRecorrencia)
-    {
-        this.tempoRecorrencia = tempoRecorrencia;
-    }
-
-    public Recorrencia getPeriodoRecorencia()
-    {
-        return periodoRecorencia;
-    }
-
-    public void setPeriodoRecorencia(Recorrencia periodoRecorencia)
-    {
-        this.periodoRecorencia = periodoRecorencia;
     }
 
     public boolean isParcelamento()
