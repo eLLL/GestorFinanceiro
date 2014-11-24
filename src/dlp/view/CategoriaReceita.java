@@ -67,8 +67,8 @@ public class CategoriaReceita extends javax.swing.JFrame
 
         jLabel2.setText("Cor");
 
-        slct_cor.setModel(new javax.swing.DefaultComboBoxModel(new String[]
-        { "Amarelo", "Azul", "Branco", "Laranja", "Verde", "Vermelho", "Preto", "Roxo" }));
+        slct_cor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Amarelo", "Azul", "Branco", "Laranja",
+                "Verde", "Vermelho", "Preto", "Roxo" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

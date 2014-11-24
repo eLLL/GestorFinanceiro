@@ -1,3 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package dlp.view;
 
 /**
@@ -35,11 +41,6 @@ public class AddReceita extends javax.swing.JFrame
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jCheckBox1 = new javax.swing.JCheckBox();
         jPanel5 = new javax.swing.JPanel();
         btn_salvar = new javax.swing.JButton();
         btn_cancelar = new javax.swing.JButton();
@@ -85,8 +86,7 @@ public class AddReceita extends javax.swing.JFrame
             }
         });
 
-        slct_categoria.setModel(new javax.swing.DefaultComboBoxModel(new String[]
-        { "Salário", "Mesada", "Prêmio" }));
+        slct_categoria.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Salário", "Mesada", "Prêmio" }));
 
         jButton2.setText("...");
         jButton2.addActionListener(new java.awt.event.ActionListener()
@@ -145,7 +145,7 @@ public class AddReceita extends javax.swing.JFrame
                                                         .addComponent(txt_data, javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+                                        .addContainerGap(12, Short.MAX_VALUE)));
         jPanel2Layout
                 .setVerticalGroup(jPanel2Layout
                         .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -203,84 +203,6 @@ public class AddReceita extends javax.swing.JFrame
                                                         .addComponent(jButton2).addComponent(jLabel11))
                                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Complementos"));
-
-        jLabel2.setText("Ocorre em");
-        jLabel2.setEnabled(false);
-        jLabel2.setName(""); // NOI18N
-
-        jTextField1.setEnabled(false);
-        jTextField1.setName("janela1"); // NOI18N
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[]
-        { "Dia(s)", "Semana(s)", "Mês(es)", "Ano(s)" }));
-        jComboBox1.setEnabled(false);
-
-        jCheckBox1.setText("Recorrência");
-        jCheckBox1.addChangeListener(new javax.swing.event.ChangeListener()
-        {
-            public void stateChanged(javax.swing.event.ChangeEvent evt)
-            {
-                jCheckBox1StateChanged(evt);
-            }
-        });
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout
-                .setHorizontalGroup(jPanel4Layout
-                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(
-                                jPanel4Layout
-                                        .createSequentialGroup()
-                                        .addContainerGap()
-                                        .addGroup(
-                                                jPanel4Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jCheckBox1)
-                                                        .addGroup(
-                                                                jPanel4Layout
-                                                                        .createSequentialGroup()
-                                                                        .addComponent(jLabel2)
-                                                                        .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                        .addComponent(jTextField1,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                37,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addGap(12, 12, 12)
-                                                                        .addComponent(jComboBox1,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                78,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
-        jPanel4Layout.setVerticalGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(
-                        javax.swing.GroupLayout.Alignment.TRAILING,
-                        jPanel4Layout
-                                .createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jCheckBox1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(
-                                        jPanel4Layout
-                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                .addComponent(jLabel2)
-                                                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                        javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
-
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ferramentas"));
 
         btn_salvar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -329,39 +251,16 @@ public class AddReceita extends javax.swing.JFrame
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel3Layout.setHorizontalGroup(jPanel3Layout
+                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(
                         jPanel3Layout
                                 .createSequentialGroup()
-                                .addGroup(
-                                        jPanel3Layout
-                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(
-                                                        javax.swing.GroupLayout.Alignment.TRAILING,
-                                                        jPanel3Layout
-                                                                .createSequentialGroup()
-                                                                .addGap(8, 8, 8)
-                                                                .addComponent(jPanel2,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE))
-                                                .addGroup(
-                                                        javax.swing.GroupLayout.Alignment.TRAILING,
-                                                        jPanel3Layout
-                                                                .createSequentialGroup()
-                                                                .addContainerGap()
-                                                                .addComponent(jPanel4,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE))
-                                                .addGroup(
-                                                        jPanel3Layout
-                                                                .createSequentialGroup()
-                                                                .addContainerGap()
-                                                                .addComponent(jPanel5,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE))).addContainerGap()));
+                                .addGap(8, 8, 8)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addContainerGap())
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        Short.MAX_VALUE));
         jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(
                         jPanel3Layout
@@ -369,10 +268,8 @@ public class AddReceita extends javax.swing.JFrame
                                 .addContainerGap()
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE,
                                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 98,
+                                        Short.MAX_VALUE)
                                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE,
                                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)));
 
@@ -553,30 +450,6 @@ public class AddReceita extends javax.swing.JFrame
     {// GEN-FIRST:event_btn_salvarActionPerformed
         // TODO add your handling code here:
     }// GEN-LAST:event_btn_salvarActionPerformed
-
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt)
-    {// GEN-FIRST:event_jCheckBox1ActionPerformed
-
-        // TODO add your handling code here:
-    }// GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void jCheckBox1StateChanged(javax.swing.event.ChangeEvent evt)
-    {// GEN-FIRST:event_jCheckBox1StateChanged
-
-        if (jCheckBox1.isSelected())
-        {
-            jLabel2.setEnabled(true);
-            jTextField1.setEnabled(true);
-            jComboBox1.setEnabled(true);
-        }
-        else
-        {
-            jLabel2.setEnabled(false);
-            jTextField1.setEnabled(false);
-            jComboBox1.setEnabled(false);
-        }
-        // TODO add your handling code here:
-    }// GEN-LAST:event_jCheckBox1StateChanged
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_btn_cancelarActionPerformed
@@ -763,11 +636,8 @@ public class AddReceita extends javax.swing.JFrame
     private javax.swing.JButton btn_cancelar;
     private javax.swing.JButton btn_salvar;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
@@ -786,9 +656,7 @@ public class AddReceita extends javax.swing.JFrame
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox slct_categoria;
     private java.awt.TextField txt_data;
     private java.awt.TextField txt_descricao;

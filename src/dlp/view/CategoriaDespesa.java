@@ -1,3 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package dlp.view;
 
 /**
@@ -61,8 +67,8 @@ public class CategoriaDespesa extends javax.swing.JFrame
 
         jLabel2.setText("Cor");
 
-        slct_cor.setModel(new javax.swing.DefaultComboBoxModel(new String[]
-        { "Amarelo", "Azul", "Laranja", "Verde", "Vermelho" }));
+        slct_cor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Amarelo", "Azul", "Laranja", "Verde",
+                "Vermelho" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

@@ -1,3 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package dlp.view;
 
 /**
@@ -75,23 +81,22 @@ public class RelatorioDespesa extends javax.swing.JFrame
         jPanel11Layout.setVerticalGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING));
 
-        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(new Object[][]
+        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(new Object[][] {
+                { "Almoço", "Alimentação", "01/06/2014", new Double(10.0) },
+                { "Almoço", "Alimentação", "05/06/2014", new Double(7.5) },
+                { "Almoço", "Alimentação", "09/06/2014", new Double(12.9) },
+                { "Compras mês", "Mercado", "15/06/2014", new Double(150.0) },
+                { "Camisas", "Roupas", "01/07/2014", new Double(350.4) },
+                { "Janta", "Alimentação", "02/07/2014", new Double(76.9) },
+                { "Almoço", "Alimentação", "08/08/2014", new Double(15.9) },
+                { "Lanche", "Alimentação", "12/08/2014", new Double(11.0) },
+                { "Compras", "Mercado", "01/09/2014", new Double(176.5) },
+                { "Almoço", "Alimentação", "15/09/2014", new Double(9.5) },
+                { "Almoço", "Alimentação", "17/09/2014", new Double(13.4) } }, new String[] { "Descrição",
+                "Categoria", "Data", "Valor" })
         {
-        { "Almoço", "Alimentação", "01/06/2014", new Double(10.0) },
-        { "Almoço", "Alimentação", "05/06/2014", new Double(7.5) },
-        { "Almoço", "Alimentação", "09/06/2014", new Double(12.9) },
-        { "Compras mês", "Mercado", "15/06/2014", new Double(150.0) },
-        { "Camisas", "Roupas", "01/07/2014", new Double(350.4) },
-        { "Janta", "Alimentação", "02/07/2014", new Double(76.9) },
-        { "Almoço", "Alimentação", "08/08/2014", new Double(15.9) },
-        { "Lanche", "Alimentação", "12/08/2014", new Double(11.0) },
-        { "Compras", "Mercado", "01/09/2014", new Double(176.5) },
-        { "Almoço", "Alimentação", "15/09/2014", new Double(9.5) },
-        { "Almoço", "Alimentação", "17/09/2014", new Double(13.4) } }, new String[]
-        { "Descrição", "Categoria", "Data", "Valor" })
-        {
-            Class[] types = new Class[]
-            { java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class };
+            Class[] types = new Class[] { java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                    java.lang.Double.class };
 
             public Class getColumnClass(int columnIndex)
             {

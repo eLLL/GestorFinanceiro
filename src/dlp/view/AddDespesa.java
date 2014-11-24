@@ -1,3 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package dlp.view;
 
 /**
@@ -35,16 +41,6 @@ public class AddDespesa extends javax.swing.JFrame
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jCheckBox1 = new javax.swing.JCheckBox();
-        cb_isParcelado = new javax.swing.JCheckBox();
-        txt_nParcela = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        txt_vParcela = new javax.swing.JTextField();
         jPanel5 = new javax.swing.JPanel();
         btn_salvar = new javax.swing.JButton();
         btn_cancelar = new javax.swing.JButton();
@@ -83,8 +79,8 @@ public class AddDespesa extends javax.swing.JFrame
 
         txt_valor.setText("R$ 0,00");
 
-        slct_categoria.setModel(new javax.swing.DefaultComboBoxModel(new String[]
-        { "Alimentação", "Roupas", "Mercado" }));
+        slct_categoria.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Alimentação", "Roupas",
+                "Mercado" }));
 
         jButton2.setText("...");
         jButton2.addActionListener(new java.awt.event.ActionListener()
@@ -201,158 +197,6 @@ public class AddDespesa extends javax.swing.JFrame
                                                         .addComponent(jButton2).addComponent(jLabel11))
                                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Complementos"));
-
-        jLabel2.setText("Ocorre em");
-        jLabel2.setEnabled(false);
-        jLabel2.setName(""); // NOI18N
-
-        jTextField1.setEnabled(false);
-        jTextField1.setName("janela1"); // NOI18N
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[]
-        { "Dia(s)", "Semana(s)", "Mês(es)", "Ano(s)" }));
-        jComboBox1.setEnabled(false);
-
-        jCheckBox1.setText("Recorrência");
-        jCheckBox1.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                jCheckBox1ActionPerformed(evt);
-            }
-        });
-
-        cb_isParcelado.setText("Parcelamento");
-        cb_isParcelado.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                cb_isParceladoActionPerformed(evt);
-            }
-        });
-
-        txt_nParcela.setEnabled(false);
-        txt_nParcela.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txt_nParcelaActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setText("Número de parcelas");
-        jLabel1.setEnabled(false);
-
-        jLabel5.setText("Valor mensal");
-        jLabel5.setEnabled(false);
-
-        txt_vParcela.setText("R$ 0.00");
-        txt_vParcela.setEnabled(false);
-        txt_vParcela.addActionListener(new java.awt.event.ActionListener()
-        {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
-            {
-                txt_vParcelaActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout
-                .setHorizontalGroup(jPanel4Layout
-                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(
-                                jPanel4Layout
-                                        .createSequentialGroup()
-                                        .addContainerGap()
-                                        .addGroup(
-                                                jPanel4Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(cb_isParcelado)
-                                                        .addGroup(
-                                                                jPanel4Layout
-                                                                        .createSequentialGroup()
-                                                                        .addComponent(jLabel1)
-                                                                        .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                        .addComponent(txt_nParcela,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                44,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addGap(18, 18, 18)
-                                                                        .addComponent(jLabel5)
-                                                                        .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                        .addComponent(txt_vParcela,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                69,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addComponent(jCheckBox1)
-                                                        .addGroup(
-                                                                jPanel4Layout
-                                                                        .createSequentialGroup()
-                                                                        .addComponent(jLabel2)
-                                                                        .addGap(6, 6, 6)
-                                                                        .addComponent(jTextField1,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                44,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                        .addComponent(jComboBox1,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                78,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
-        jPanel4Layout
-                .setVerticalGroup(jPanel4Layout
-                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(
-                                javax.swing.GroupLayout.Alignment.TRAILING,
-                                jPanel4Layout
-                                        .createSequentialGroup()
-                                        .addContainerGap(11, Short.MAX_VALUE)
-                                        .addComponent(jCheckBox1)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addGroup(
-                                                jPanel4Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(jLabel2)
-                                                        .addComponent(jTextField1,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jComboBox1,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(
-                                                jPanel4Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                        .addGroup(
-                                                                jPanel4Layout
-                                                                        .createSequentialGroup()
-                                                                        .addComponent(cb_isParcelado)
-                                                                        .addPreferredGap(
-                                                                                javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                                                        .addComponent(jLabel1))
-                                                        .addGroup(
-                                                                jPanel4Layout
-                                                                        .createParallelGroup(
-                                                                                javax.swing.GroupLayout.Alignment.BASELINE)
-                                                                        .addComponent(txt_nParcela,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                                javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                                        .addComponent(jLabel5))
-                                                        .addComponent(txt_vParcela,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
-                                                                javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addGap(10, 10, 10)));
-
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ferramentas"));
 
         btn_salvar.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
@@ -401,39 +245,16 @@ public class AddDespesa extends javax.swing.JFrame
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanel3Layout.setHorizontalGroup(jPanel3Layout
+                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(
                         jPanel3Layout
                                 .createSequentialGroup()
-                                .addGroup(
-                                        jPanel3Layout
-                                                .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                .addGroup(
-                                                        javax.swing.GroupLayout.Alignment.TRAILING,
-                                                        jPanel3Layout
-                                                                .createSequentialGroup()
-                                                                .addGap(8, 8, 8)
-                                                                .addComponent(jPanel2,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE))
-                                                .addGroup(
-                                                        javax.swing.GroupLayout.Alignment.TRAILING,
-                                                        jPanel3Layout
-                                                                .createSequentialGroup()
-                                                                .addContainerGap()
-                                                                .addComponent(jPanel4,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE))
-                                                .addGroup(
-                                                        jPanel3Layout
-                                                                .createSequentialGroup()
-                                                                .addContainerGap()
-                                                                .addComponent(jPanel5,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        javax.swing.GroupLayout.DEFAULT_SIZE,
-                                                                        Short.MAX_VALUE))).addContainerGap()));
+                                .addGap(8, 8, 8)
+                                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE,
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addContainerGap())
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        Short.MAX_VALUE));
         jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(
                         jPanel3Layout
@@ -441,13 +262,10 @@ public class AddDespesa extends javax.swing.JFrame
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE,
                                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(98, 98, 98)
                                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE,
                                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(5, 5, 5)));
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         jMenu1.setText("Adicionar");
 
@@ -602,15 +420,17 @@ public class AddDespesa extends javax.swing.JFrame
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(
                 jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
-        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(
-                jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+                layout.createSequentialGroup()
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 341,
+                                javax.swing.GroupLayout.PREFERRED_SIZE).addGap(0, 3, Short.MAX_VALUE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_dataActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_txt_dataActionPerformed
-     // TODO add your handling code here:
+        // TODO add your handling code here:
 
     }// GEN-LAST:event_txt_dataActionPerformed
 
@@ -624,53 +444,8 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_btn_salvarActionPerformed
-     // TODO add your handling code here:
+        // TODO add your handling code here:
     }// GEN-LAST:event_btn_salvarActionPerformed
-
-    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt)
-    {// GEN-FIRST:event_jCheckBox1ActionPerformed
-
-        if (jCheckBox1.isSelected())
-        {
-            jLabel2.setEnabled(true);
-            jTextField1.setEnabled(true);
-            jComboBox1.setEnabled(true);
-        }
-        else
-        {
-            jLabel2.setEnabled(false);
-            jTextField1.setEnabled(false);
-            jComboBox1.setEnabled(false);
-        }
-
-        // TODO add your handling code here:
-    }// GEN-LAST:event_jCheckBox1ActionPerformed
-
-    private void txt_nParcelaActionPerformed(java.awt.event.ActionEvent evt)
-    {// GEN-FIRST:event_txt_nParcelaActionPerformed
-     // TODO add your handling code here:
-    }// GEN-LAST:event_txt_nParcelaActionPerformed
-
-    private void cb_isParceladoActionPerformed(java.awt.event.ActionEvent evt)
-    {// GEN-FIRST:event_cb_isParceladoActionPerformed
-
-        if (cb_isParcelado.isSelected())
-        {
-            jLabel1.setEnabled(true);
-            txt_nParcela.setEnabled(true);
-        }
-        else
-        {
-            jLabel1.setEnabled(false);
-            txt_nParcela.setEnabled(false);
-        }
-        // TODO add your handling code here:
-    }// GEN-LAST:event_cb_isParceladoActionPerformed
-
-    private void txt_vParcelaActionPerformed(java.awt.event.ActionEvent evt)
-    {// GEN-FIRST:event_txt_vParcelaActionPerformed
-     // TODO add your handling code here:
-    }// GEN-LAST:event_txt_vParcelaActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_btn_cancelarActionPerformed
@@ -777,7 +552,7 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt)
     {// GEN-FIRST:event_jMenu4MouseClicked
-     // TODO add your handling code here:
+        // TODO add your handling code here:
         Sobre frame = new Sobre();
         frame.setVisible(true);
     }// GEN-LAST:event_jMenu4MouseClicked
@@ -851,15 +626,9 @@ public class AddDespesa extends javax.swing.JFrame
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cancelar;
     private javax.swing.JButton btn_salvar;
-    private javax.swing.JCheckBox cb_isParcelado;
     private javax.swing.JButton jButton2;
-    private javax.swing.JCheckBox jCheckBox1;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JMenu jMenu1;
@@ -878,14 +647,10 @@ public class AddDespesa extends javax.swing.JFrame
     private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox slct_categoria;
     private java.awt.TextField txt_data;
     private java.awt.TextField txt_descricao;
-    private javax.swing.JTextField txt_nParcela;
-    private javax.swing.JTextField txt_vParcela;
     private java.awt.TextField txt_valor;
     // End of variables declaration//GEN-END:variables
 }

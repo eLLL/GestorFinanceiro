@@ -1,3 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package dlp.view;
 
 /**
@@ -51,17 +57,16 @@ public class RelatorioReceita extends javax.swing.JFrame
                 javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
                 javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
-        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(new Object[][]
+        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(new Object[][] {
+                { "Trabalho", "Salário", "01/06/2014", new Double(8000.0) },
+                { "Trabalho", "Salário", "01/07/2014", new Double(7500.0) },
+                { "Trabalho", "Salário", "01/08/2014", new Double(5000.0) },
+                { "Func. mês", "Prêmio", "31/08/2014", new Double(500.0) },
+                { "Trabalho", "Salário", "01/09/2014", new Double(12000.0) } }, new String[] { "Descrição",
+                "Categoria", "Data", "Valor" })
         {
-        { "Trabalho", "Salário", "01/06/2014", new Double(8000.0) },
-        { "Trabalho", "Salário", "01/07/2014", new Double(7500.0) },
-        { "Trabalho", "Salário", "01/08/2014", new Double(5000.0) },
-        { "Func. mês", "Prêmio", "31/08/2014", new Double(500.0) },
-        { "Trabalho", "Salário", "01/09/2014", new Double(12000.0) } }, new String[]
-        { "Descrição", "Categoria", "Data", "Valor" })
-        {
-            Class[] types = new Class[]
-            { java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class };
+            Class[] types = new Class[] { java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                    java.lang.Double.class };
 
             public Class getColumnClass(int columnIndex)
             {

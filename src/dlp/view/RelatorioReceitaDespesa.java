@@ -1,3 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package dlp.view;
 
 /**
@@ -51,29 +57,27 @@ public class RelatorioReceitaDespesa extends javax.swing.JFrame
                 javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
                 javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
-        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(new Object[][]
+        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(new Object[][] {
+                { "Trabalho", "Salário", "01/06/2014", new Double(8000.0), "Receita" },
+                { "Almoço", "Alimentação", "01/06/2014", new Double(10.0), "Despesa" },
+                { "Almoço", "Alimentação", "05/06/2014", new Double(7.5), "Despesa" },
+                { "Almoço", "Alimentação", "09/06/2014", new Double(12.9), "Despesa" },
+                { "Compras mês", "Mercado", "15/06/2014", new Double(150.0), "Despesa" },
+                { "Trabalho", "Salário", "01/07/2014", new Double(7500.0), "Receita" },
+                { "Camisas", "Roupas", "01/07/2014", new Double(350.4), "Despesa" },
+                { "Janta", "Alimentação", "02/07/2014", new Double(76.9), "Despesa" },
+                { "Trabalho", "Salário", "01/08/2014", new Double(5000.0), "Receita" },
+                { "Almoço", "Alimentação", "08/08/2014", new Double(15.9), "Despesa" },
+                { "Lanche", "Alimentação", "12/08/2014", new Double(11.0), "Despesa" },
+                { "Trabalho", "Salário", "01/09/2014", new Double(12000.0), "Receita" },
+                { "Compras", "Mercado", "01/09/2014", new Double(176.5), "Despesa" },
+                { "Almoço", "Alimentação", "15/09/2014", new Double(9.5), "Despesa" },
+                { "Almoço", "Alimentação", "17/09/2014", new Double(13.4), "Despesa" },
+                { "Func. mês", "Prêmio", "31/09/2014", new Double(500.0), "Receita" } }, new String[] {
+                "Descrição", "Categoria", "Data", "Valor", "Tipo" })
         {
-        { "Trabalho", "Salário", "01/06/2014", new Double(8000.0), "Receita" },
-        { "Almoço", "Alimentação", "01/06/2014", new Double(10.0), "Despesa" },
-        { "Almoço", "Alimentação", "05/06/2014", new Double(7.5), "Despesa" },
-        { "Almoço", "Alimentação", "09/06/2014", new Double(12.9), "Despesa" },
-        { "Compras mês", "Mercado", "15/06/2014", new Double(150.0), "Despesa" },
-        { "Trabalho", "Salário", "01/07/2014", new Double(7500.0), "Receita" },
-        { "Camisas", "Roupas", "01/07/2014", new Double(350.4), "Despesa" },
-        { "Janta", "Alimentação", "02/07/2014", new Double(76.9), "Despesa" },
-        { "Trabalho", "Salário", "01/08/2014", new Double(5000.0), "Receita" },
-        { "Almoço", "Alimentação", "08/08/2014", new Double(15.9), "Despesa" },
-        { "Lanche", "Alimentação", "12/08/2014", new Double(11.0), "Despesa" },
-        { "Trabalho", "Salário", "01/09/2014", new Double(12000.0), "Receita" },
-        { "Compras", "Mercado", "01/09/2014", new Double(176.5), "Despesa" },
-        { "Almoço", "Alimentação", "15/09/2014", new Double(9.5), "Despesa" },
-        { "Almoço", "Alimentação", "17/09/2014", new Double(13.4), "Despesa" },
-        { "Func. mês", "Prêmio", "31/09/2014", new Double(500.0), "Receita" } }, new String[]
-        { "Descrição", "Categoria", "Data", "Valor", "Tipo" })
-        {
-            Class[] types = new Class[]
-            { java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class,
-                    java.lang.String.class };
+            Class[] types = new Class[] { java.lang.String.class, java.lang.String.class, java.lang.String.class,
+                    java.lang.Double.class, java.lang.String.class };
 
             public Class getColumnClass(int columnIndex)
             {
