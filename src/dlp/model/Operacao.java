@@ -5,12 +5,11 @@ import java.util.Calendar;
 
 public class Operacao
 {
-    int id;
-    String descricao;
-    Calendar data;
-    Categoria categoria;
-    boolean parcelamento;
-    int numeroParcelas;
+    private int id;
+    private String descricao;
+    private Calendar data;
+    private Categoria categoria;
+    private double valor;
 
     public Operacao()
     {
@@ -57,24 +56,15 @@ public class Operacao
         this.categoria = categoria;
     }
 
-    public boolean isParcelamento()
+    public double getValor()
     {
-        return parcelamento;
+        return valor;
     }
 
-    public void setParcelamento(boolean parcelamento)
+    public void setValor(double valor)
     {
-        this.parcelamento = parcelamento;
+        this.valor = valor;
     }
 
-    public int getNumeroParcelas()
-    {
-        return numeroParcelas;
-    }
-
-    public void setNumeroParcelas(int numeroParcelas)
-    {
-        this.numeroParcelas = numeroParcelas;
-    }
 
 }
