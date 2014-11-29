@@ -22,7 +22,7 @@ public class DAO
         {
             ex.printStackTrace();
             JOptionPane.showMessageDialog(null, "Erro ao fazer conexão com o banco de dados");
-            System.exit(-1);
+            //System.exit(-1);
         }
     }
 
