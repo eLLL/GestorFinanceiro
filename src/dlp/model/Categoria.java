@@ -1,7 +1,12 @@
 package dlp.model;
 
+import dlp.control.DAO;
+import java.sql.Connection;
+import java.sql.Statement;
+
 public class Categoria
 {
+
     private int id;
     private String nome;
     private Cor cor;
@@ -9,7 +14,7 @@ public class Categoria
 
     public Categoria()
     {
-        
+
     }
 
     public Categoria(int id, String nome, Cor cor, TipoOperacao tipo)
@@ -59,5 +64,26 @@ public class Categoria
     public void setTipo(TipoOperacao tipo)
     {
         this.tipo = tipo;
+    }
+
+    public boolean addBD()
+    {
+        try
+        {
+            Connection con = DAO.getConnection();
+
+            Statement st = con.createStatement();
+            String sql = String.format("INSERT INTO Categoria VALUES (DEFAULT, '%s', '%s', '%s');", this.nome, cor.toString(),
+                    this.tipo.toString());
+            st.executeUpdate(sql);
+
+            return true;
+        }
+        catch (Exception ex)
+        {
+            ex.printStackTrace();
+        }
+
+        return false;
     }
 }
