@@ -64,7 +64,8 @@ public class AddDespesa extends javax.swing.JFrame
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nova Despesa",
                 javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION,
-                javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
+                javax.swing.border.TitledBorder.DEFAULT_POSITION,
+                new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Informações"));
 
@@ -79,8 +80,8 @@ public class AddDespesa extends javax.swing.JFrame
 
         txt_valor.setText("R$ 0,00");
 
-        slct_categoria.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Alimentação", "Roupas",
-                "Mercado" }));
+        slct_categoria.setModel(new javax.swing.DefaultComboBoxModel(new String[]
+        { "Alimentação", "Roupas", "Mercado" }));
 
         jButton2.setText("...");
         jButton2.addActionListener(new java.awt.event.ActionListener()
@@ -110,36 +111,50 @@ public class AddDespesa extends javax.swing.JFrame
                                         .addContainerGap()
                                         .addGroup(
                                                 jPanel2Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                        .addComponent(jLabel8).addComponent(jLabel9)
-                                                        .addComponent(jLabel10).addComponent(jLabel11))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .createParallelGroup(
+                                                                javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel8)
+                                                        .addComponent(jLabel9)
+                                                        .addComponent(jLabel10)
+                                                        .addComponent(jLabel11))
+                                        .addPreferredGap(
+                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(
                                                 jPanel2Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .createParallelGroup(
+                                                                javax.swing.GroupLayout.Alignment.LEADING)
                                                         .addGroup(
                                                                 jPanel2Layout
                                                                         .createSequentialGroup()
-                                                                        .addComponent(slct_categoria,
+                                                                        .addComponent(
+                                                                                slct_categoria,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 125,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
                                                                         .addPreferredGap(
                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                        .addComponent(jButton2,
+                                                                        .addComponent(
+                                                                                jButton2,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 22,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                        .addComponent(txt_valor,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 117,
+                                                        .addComponent(
+                                                                txt_valor,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                117,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txt_descricao,
-                                                                javax.swing.GroupLayout.PREFERRED_SIZE, 254,
+                                                        .addComponent(
+                                                                txt_descricao,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                                254,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(txt_data, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                                        .addComponent(
+                                                                txt_data,
+                                                                javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                Short.MAX_VALUE)));
         jPanel2Layout
                 .setVerticalGroup(jPanel2Layout
                         .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,7 +164,8 @@ public class AddDespesa extends javax.swing.JFrame
                                         .addContainerGap()
                                         .addGroup(
                                                 jPanel2Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                        .createParallelGroup(
+                                                                javax.swing.GroupLayout.Alignment.TRAILING)
                                                         .addGroup(
                                                                 jPanel2Layout
                                                                         .createSequentialGroup()
@@ -178,24 +194,31 @@ public class AddDespesa extends javax.swing.JFrame
                                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
-                                                                                        .addComponent(jLabel9))
+                                                                                        .addComponent(
+                                                                                                jLabel9))
                                                                         .addPreferredGap(
                                                                                 javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                                                        .addComponent(txt_data,
+                                                                        .addComponent(
+                                                                                txt_data,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                                 javax.swing.GroupLayout.PREFERRED_SIZE))
                                                         .addComponent(jLabel10))
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addPreferredGap(
+                                                javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(
                                                 jPanel2Layout
-                                                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                                        .addComponent(slct_categoria,
+                                                        .createParallelGroup(
+                                                                javax.swing.GroupLayout.Alignment.BASELINE)
+                                                        .addComponent(
+                                                                slct_categoria,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE,
                                                                 javax.swing.GroupLayout.DEFAULT_SIZE,
                                                                 javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                        .addComponent(jButton2).addComponent(jLabel11))
-                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+                                                        .addComponent(jButton2)
+                                                        .addComponent(jLabel11))
+                                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE,
+                                                Short.MAX_VALUE)));
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ferramentas"));
 
@@ -224,24 +247,25 @@ public class AddDespesa extends javax.swing.JFrame
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(
-                        javax.swing.GroupLayout.Alignment.TRAILING,
-                        jPanel5Layout
-                                .createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(btn_cancelar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_salvar, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(9, 9, 9)));
-        jPanel5Layout.setVerticalGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(
-                        jPanel5Layout
-                                .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(btn_cancelar)
-                                .addComponent(btn_salvar, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)));
+        jPanel5Layout.setHorizontalGroup(jPanel5Layout.createParallelGroup(
+                javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+                javax.swing.GroupLayout.Alignment.TRAILING,
+                jPanel5Layout
+                        .createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(btn_cancelar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btn_salvar, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.PREFERRED_SIZE).addGap(9, 9, 9)));
+        jPanel5Layout.setVerticalGroup(jPanel5Layout.createParallelGroup(
+                javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+                jPanel5Layout
+                        .createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btn_cancelar)
+                        .addComponent(btn_salvar, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.PREFERRED_SIZE)));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -252,20 +276,23 @@ public class AddDespesa extends javax.swing.JFrame
                                 .createSequentialGroup()
                                 .addGap(8, 8, 8)
                                 .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE).addContainerGap())
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
-                        Short.MAX_VALUE));
-        jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(
-                        jPanel3Layout
-                                .createSequentialGroup()
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(98, 98, 98)
-                                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE,
-                                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+                                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addContainerGap())
+                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
+        jPanel3Layout.setVerticalGroup(jPanel3Layout.createParallelGroup(
+                javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+                jPanel3Layout
+                        .createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(98, 98, 98)
+                        .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE,
+                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
 
         jMenu1.setText("Adicionar");
 
@@ -418,19 +445,23 @@ public class AddDespesa extends javax.swing.JFrame
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(
-                jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE));
-        layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addGroup(
+        layout.setHorizontalGroup(layout.createParallelGroup(
+                javax.swing.GroupLayout.Alignment.LEADING).addComponent(jPanel3,
+                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                Short.MAX_VALUE));
+        layout.setVerticalGroup(layout.createParallelGroup(
+                javax.swing.GroupLayout.Alignment.LEADING).addGroup(
                 layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 341,
-                                javax.swing.GroupLayout.PREFERRED_SIZE).addGap(0, 3, Short.MAX_VALUE)));
+                                javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 3, Short.MAX_VALUE)));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void txt_dataActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_txt_dataActionPerformed
-        // TODO add your handling code here:
+     // TODO add your handling code here:
 
     }// GEN-LAST:event_txt_dataActionPerformed
 
@@ -444,7 +475,7 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt)
     {// GEN-FIRST:event_btn_salvarActionPerformed
-        // TODO add your handling code here:
+     // TODO add your handling code here:
     }// GEN-LAST:event_btn_salvarActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt)
@@ -552,7 +583,7 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt)
     {// GEN-FIRST:event_jMenu4MouseClicked
-        // TODO add your handling code here:
+     // TODO add your handling code here:
         Sobre frame = new Sobre();
         frame.setVisible(true);
     }// GEN-LAST:event_jMenu4MouseClicked
@@ -586,7 +617,8 @@ public class AddDespesa extends javax.swing.JFrame
          */
         try
         {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager
+                    .getInstalledLookAndFeels())
             {
                 if ("Nimbus".equals(info.getName()))
                 {
@@ -596,20 +628,20 @@ public class AddDespesa extends javax.swing.JFrame
             }
         } catch (ClassNotFoundException ex)
         {
-            java.util.logging.Logger.getLogger(AddDespesa.class.getName())
-                    .log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddDespesa.class.getName()).log(
+                    java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex)
         {
-            java.util.logging.Logger.getLogger(AddDespesa.class.getName())
-                    .log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddDespesa.class.getName()).log(
+                    java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex)
         {
-            java.util.logging.Logger.getLogger(AddDespesa.class.getName())
-                    .log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddDespesa.class.getName()).log(
+                    java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex)
         {
-            java.util.logging.Logger.getLogger(AddDespesa.class.getName())
-                    .log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(AddDespesa.class.getName()).log(
+                    java.util.logging.Level.SEVERE, null, ex);
         }
         // </editor-fold>
 
