@@ -3,6 +3,7 @@ package dlp.control;
 import dlp.model.Categoria;
 import dlp.model.Operacao;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Manager
 {
@@ -44,5 +45,20 @@ public class Manager
     public static void setSaldo(double saldo)
     {
         Manager.saldo = saldo;
+    }
+
+    public static Categoria getCategoria(String nome)
+    {
+        for (Map.Entry<Integer, Categoria> categoria : categorias.entrySet())
+        {
+            Categoria value = categoria.getValue();
+
+            if (value.getNome().equalsIgnoreCase(nome))
+            {
+                return value;
+            }
+        }
+
+        return null;
     }
 }
