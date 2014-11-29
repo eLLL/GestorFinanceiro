@@ -530,8 +530,8 @@ public class AddDespesa extends javax.swing.JFrame
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel5;
     public static javax.swing.JComboBox slct_categoria;
-    private javax.swing.JFormattedTextField txt_data;
+    public static javax.swing.JFormattedTextField txt_data;
     public static java.awt.TextField txt_descricao;
-    private javax.swing.JFormattedTextField txt_valor;
+    public static javax.swing.JFormattedTextField txt_valor;
     // End of variables declaration//GEN-END:variables
 }
