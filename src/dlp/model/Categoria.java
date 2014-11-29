@@ -9,7 +9,7 @@ public class Categoria
 
     public Categoria()
     {
-        // TODO Auto-generated constructor stub
+        
     }
 
     public Categoria(int id, String nome, Cor cor, TipoOperacao tipo)
