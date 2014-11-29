@@ -100,6 +100,13 @@ public class AddDespesa extends javax.swing.JFrame
         });
 
         txt_data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+        txt_data.addActionListener(new java.awt.event.ActionListener()
+        {
+            public void actionPerformed(java.awt.event.ActionEvent evt)
+            {
+                txt_dataActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -502,6 +509,11 @@ public class AddDespesa extends javax.swing.JFrame
     {//GEN-HEADEREND:event_txt_valorActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_valorActionPerformed
+
+    private void txt_dataActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_txt_dataActionPerformed
+    {//GEN-HEADEREND:event_txt_dataActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txt_dataActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cancelar;
