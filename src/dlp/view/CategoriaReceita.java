@@ -1,21 +1,24 @@
 package dlp.view;
 
+import dlp.control.AddCategoria;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author USUARIO
  */
-public class CategoriaReceita extends javax.swing.JFrame {
+public class CategoriaReceita extends javax.swing.JFrame
+{
 
     /**
      * Creates new form CategoriaReceita
      */
-    public CategoriaReceita() {
+    public CategoriaReceita()
+    {
         initComponents();
     }
 
@@ -321,7 +324,7 @@ public class CategoriaReceita extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
-        // TODO add your handling code here:
+        AddCategoria.AddReceita(evt);
     }//GEN-LAST:event_btn_salvarActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed

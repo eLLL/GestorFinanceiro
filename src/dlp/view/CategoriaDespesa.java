@@ -3,19 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dlp.view;
+
+import dlp.control.AddCategoria;
 
 /**
  *
  * @author USUARIO
  */
-public class CategoriaDespesa extends javax.swing.JFrame {
+public class CategoriaDespesa extends javax.swing.JFrame
+{
 
     /**
      * Creates new form CategoriaDespesa
      */
-    public CategoriaDespesa() {
+    public CategoriaDespesa()
+    {
         initComponents();
     }
 
@@ -323,7 +326,8 @@ public class CategoriaDespesa extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
-        // TODO add your handling code here:
+
+        AddCategoria.AddDespesa(evt);
     }//GEN-LAST:event_btn_salvarActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed
@@ -457,7 +461,7 @@ public class CategoriaDespesa extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JComboBox slct_cor;
-    private javax.swing.JTextField txt_nome;
+    public static javax.swing.JComboBox slct_cor;
+    public static javax.swing.JTextField txt_nome;
     // End of variables declaration//GEN-END:variables
 }
