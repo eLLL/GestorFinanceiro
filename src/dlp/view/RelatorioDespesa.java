@@ -113,6 +113,13 @@ public class RelatorioDespesa extends javax.swing.JFrame {
             }
         });
         jScrollPane1.setViewportView(tb_relatorio);
+        if (tb_relatorio.getColumnModel().getColumnCount() > 0)
+        {
+            tb_relatorio.getColumnModel().getColumn(0).setHeaderValue("Descrição");
+            tb_relatorio.getColumnModel().getColumn(1).setHeaderValue("Categoria");
+            tb_relatorio.getColumnModel().getColumn(2).setHeaderValue("Data");
+            tb_relatorio.getColumnModel().getColumn(3).setHeaderValue("Valor");
+        }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
