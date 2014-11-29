@@ -1,11 +1,12 @@
 package dlp.model;
 
-import java.sql.Connection;
-import java.sql.Statement;
-import java.util.Calendar;
 import dlp.control.DAO;
 import dlp.control.Manager;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,23 +25,15 @@ public class Operacao
     }
 
     public Operacao(int id, String descricao, Calendar data, Categoria categoria, double valor)
-    {  
+    {
+        super();
         this.id = id;
         this.descricao = descricao;
         this.data = data;
         this.categoria = categoria;
         this.valor = valor;
-        if(addBD())
-        {
-            Manager.getOperacoes().put(id, this);
-            if(this.categoria.getTipo() == TipoOperacao.DESPESA)
-                Manager.setSaldo(Manager.getSaldo() - this.valor);
-            else
-                Manager.setSaldo(Manager.getSaldo() + this.valor);
-        }
     }
 
-    
     public int getId()
     {
         return id;
@@ -91,13 +84,19 @@ public class Operacao
         this.valor = valor;
     }
 
+    /**
+     * Salva no banco de dados
+     *
+     * @return status da operação
+     */
     public boolean addBD()
     {
+        Statement stmt = null;
         try
         {
             Connection con = DAO.getConnection();
 
-            Statement st = con.createStatement();
+            stmt = con.createStatement();
 
             String data = this.data.get(Calendar.YEAR) + "-" + this.data.get(Calendar.MONTH) + "-"
                     + this.data.get(Calendar.DAY_OF_MONTH);
@@ -105,13 +104,38 @@ public class Operacao
             String sql = String.format("INSERT INTO Operacao VALUES(DEFAULT, %d, '%s', '%s', %.2f);",
                     this.categoria.getId(), this.descricao, data, this.valor);
 
-            st.executeUpdate(sql);
+            stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+
+            ResultSet rs = stmt.getGeneratedKeys();
+            if (rs.next())
+            {
+                // Retrieve the auto generated key(s).
+                this.id = rs.getInt(1);
+            }
+
+            // Salva na lista interna e atualiza saldo
+            Manager.getOperacoes().put(id, this);
+            if (this.categoria.getTipo() == TipoOperacao.DESPESA)
+            {
+                Manager.setSaldo(Manager.getSaldo() - this.valor);
+            } else
+            {
+                Manager.setSaldo(Manager.getSaldo() + this.valor);
+            }
 
             return true;
-        }
-        catch (Exception ex)
+        } catch (Exception ex)
         {
             ex.printStackTrace();
+        } finally
+        {
+            try
+            {
+                stmt.close();
+            } catch (SQLException ex)
+            {
+                Logger.getLogger(Operacao.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
         return false;
     }

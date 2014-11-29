@@ -1,8 +1,13 @@
 package dlp.model;
 
 import dlp.control.DAO;
+import dlp.control.Manager;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Categoria
 {
@@ -68,20 +73,41 @@ public class Categoria
 
     public boolean addBD()
     {
+        Statement stmt = null;
         try
         {
             Connection con = DAO.getConnection();
 
-            Statement st = con.createStatement();
+            stmt = con.createStatement();
             String sql = String.format("INSERT INTO Categoria VALUES (DEFAULT, '%s', '%s', '%s');", this.nome, cor.toString(),
                     this.tipo.toString());
-            st.executeUpdate(sql);
+            stmt.executeUpdate(sql);
+
+            stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+
+            ResultSet rs = stmt.getGeneratedKeys();
+            if (rs.next())
+            {
+                // Retrieve the auto generated key(s).
+                this.id = rs.getInt(1);
+            }
+
+            // Adiconado na lista de categorias
+            Manager.getCategorias().put(id, this);
 
             return true;
-        }
-        catch (Exception ex)
+        } catch (Exception ex)
         {
             ex.printStackTrace();
+        } finally
+        {
+            try
+            {
+                stmt.close();
+            } catch (SQLException ex)
+            {
+                Logger.getLogger(Categoria.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
 
         return false;
