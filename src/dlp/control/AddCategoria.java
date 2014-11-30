@@ -10,6 +10,8 @@ import dlp.model.Cor;
 import dlp.model.TipoOperacao;
 import dlp.view.CategoriaDespesa;
 import java.awt.event.ActionEvent;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -25,7 +27,7 @@ public class AddCategoria
 
     public static void AddReceita(ActionEvent evt)
     {
-        add(TipoOperacao.DESPESA);
+        add(TipoOperacao.RECEITA);
     }
 
     private static void add(TipoOperacao tipo)
@@ -35,7 +37,14 @@ public class AddCategoria
         categoria.setCor(Cor.valueOf(CategoriaDespesa.slct_cor.getSelectedItem().toString().toUpperCase()));
         categoria.setTipo(tipo);
 
-        categoria.addBD();
+        if (categoria.addBD())
+        {
+            JOptionPane.showConfirmDialog(null, "Inserido com sucesso");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Erro ao inserir");
+        }
     }
 
 }
