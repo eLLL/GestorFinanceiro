@@ -10,6 +10,7 @@ import dlp.control.AddOperacao;
 import dlp.control.Manager;
 import dlp.model.CategoriaComboModel;
 import dlp.model.TipoOperacao;
+import static dlp.view.AddDespesa.slct_categoria;
 
 /**
  *
@@ -82,11 +83,17 @@ public class AddReceita extends javax.swing.JFrame {
         txt_data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
 
         slct_categoria.setModel(new CategoriaComboModel(TipoOperacao.RECEITA));
-        slct_categoria.addActionListener(new java.awt.event.ActionListener()
+        slct_categoria.addPopupMenuListener(new javax.swing.event.PopupMenuListener()
         {
-            public void actionPerformed(java.awt.event.ActionEvent evt)
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt)
             {
-                slct_categoriaActionPerformed(evt);
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt)
+            {
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt)
+            {
+                slct_categoriaPopupMenuWillBecomeVisible(evt);
             }
         });
 
@@ -497,10 +504,10 @@ public class AddReceita extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu5MouseClicked
 
-    private void slct_categoriaActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_slct_categoriaActionPerformed
-    {//GEN-HEADEREND:event_slct_categoriaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_slct_categoriaActionPerformed
+    private void slct_categoriaPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt)//GEN-FIRST:event_slct_categoriaPopupMenuWillBecomeVisible
+    {//GEN-HEADEREND:event_slct_categoriaPopupMenuWillBecomeVisible
+        slct_categoria.setModel(new CategoriaComboModel(TipoOperacao.RECEITA));
+    }//GEN-LAST:event_slct_categoriaPopupMenuWillBecomeVisible
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cancelar;

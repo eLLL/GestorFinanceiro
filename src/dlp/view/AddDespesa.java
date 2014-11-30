@@ -8,6 +8,7 @@ package dlp.view;
 import dlp.control.AddOperacao;
 import dlp.model.CategoriaComboModel;
 import dlp.model.TipoOperacao;
+import static dlp.view.AddReceita.slct_categoria;
 
 /**
  *
@@ -73,6 +74,19 @@ public class AddDespesa extends javax.swing.JFrame
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Informações"));
 
         slct_categoria.setModel(new CategoriaComboModel(TipoOperacao.DESPESA));
+        slct_categoria.addPopupMenuListener(new javax.swing.event.PopupMenuListener()
+        {
+            public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt)
+            {
+            }
+            public void popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent evt)
+            {
+            }
+            public void popupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt)
+            {
+                slct_categoriaPopupMenuWillBecomeVisible(evt);
+            }
+        });
 
         jButton2.setText("...");
         jButton2.addActionListener(new java.awt.event.ActionListener()
@@ -519,6 +533,11 @@ public class AddDespesa extends javax.swing.JFrame
     {//GEN-HEADEREND:event_txt_dataActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txt_dataActionPerformed
+
+    private void slct_categoriaPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt)//GEN-FIRST:event_slct_categoriaPopupMenuWillBecomeVisible
+    {//GEN-HEADEREND:event_slct_categoriaPopupMenuWillBecomeVisible
+        slct_categoria.setModel(new CategoriaComboModel(TipoOperacao.DESPESA));
+    }//GEN-LAST:event_slct_categoriaPopupMenuWillBecomeVisible
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cancelar;
