@@ -119,10 +119,56 @@ public class Operacao
             Manager.getOperacoes().put(id, this);
             if (this.categoria.getTipo() == TipoOperacao.DESPESA)
             {
-                Manager.setSaldo(Manager.getSaldo() - this.valor);
-            } else
+                Saldo.addDespesa(this.valor);
+            }
+            else
             {
-                Manager.setSaldo(Manager.getSaldo() + this.valor);
+                Saldo.addReceita(this.valor);
+            }
+
+            return true;
+        } catch (Exception ex)
+        {
+            ex.printStackTrace();
+            System.out.println("SQL: " + sql);
+        } finally
+        {
+            try
+            {
+                stmt.close();
+            } catch (SQLException ex)
+            {
+                Logger.getLogger(Operacao.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        return false;
+    }
+
+    public boolean removeDB()
+    {
+        Statement stmt = null;
+        String sql = "";
+
+        try
+        {
+            Connection con = DAO.getConnection();
+
+            stmt = con.createStatement();
+
+            sql = String.format("DELETE FROM Operacao WHERE id_operacao = %d;", this.id);
+
+            stmt.executeUpdate(sql);
+
+
+            // Remove na lista interna e atualiza saldo
+            Manager.getOperacoes().remove(id);
+            if (this.categoria.getTipo() == TipoOperacao.DESPESA)
+            {
+                Saldo.removeDespesa(this.valor);
+            }
+            else
+            {
+                Saldo.removeReceita(this.valor);
             }
 
             return true;

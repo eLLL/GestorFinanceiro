@@ -3,20 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dlp.view;
 
-/**
- *
- * @author USUARIO
- */
-public class RelatorioDespesa extends javax.swing.JFrame {
+import dlp.control.*;
+import dlp.model.*;
+import javax.swing.*;
+
+
+
+public class RelatorioDespesa extends javax.swing.JFrame
+{
 
     /**
      * Creates new form RelatorioDespesa
      */
-    public RelatorioDespesa() {
+    public RelatorioDespesa()
+    {
         initComponents();
+        SetupRemoveButtonDespesa.setup(tb_relatorio);
     }
 
     /**
@@ -80,51 +84,14 @@ public class RelatorioDespesa extends javax.swing.JFrame {
             .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
-        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
-                {"Almoço", "Alimentação", "01/06/2014",  new Double(10.0)},
-                {"Almoço", "Alimentação", "05/06/2014",  new Double(7.5)},
-                {"Almoço", "Alimentação", "09/06/2014",  new Double(12.9)},
-                {"Compras mês", "Mercado", "15/06/2014",  new Double(150.0)},
-                {"Camisas", "Roupas", "01/07/2014",  new Double(350.4)},
-                {"Janta", "Alimentação", "02/07/2014",  new Double(76.9)},
-                {"Almoço", "Alimentação", "08/08/2014",  new Double(15.9)},
-                {"Lanche", "Alimentação", "12/08/2014",  new Double(11.0)},
-                {"Compras", "Mercado", "01/09/2014",  new Double(176.5)},
-                {"Almoço", "Alimentação", "15/09/2014",  new Double(9.5)},
-                {"Almoço", "Alimentação", "17/09/2014",  new Double(13.4)}
-            },
-            new String []
-            {
-                "Descrição", "Categoria", "Data", "Valor"
-            }
-        )
-        {
-            Class[] types = new Class []
-            {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
-            };
-
-            public Class getColumnClass(int columnIndex)
-            {
-                return types [columnIndex];
-            }
-        });
+        tb_relatorio.setModel(new RelatorioTableModel(TipoOperacao.DESPESA));
         jScrollPane1.setViewportView(tb_relatorio);
-        if (tb_relatorio.getColumnModel().getColumnCount() > 0)
-        {
-            tb_relatorio.getColumnModel().getColumn(0).setHeaderValue("Descrição");
-            tb_relatorio.getColumnModel().getColumn(1).setHeaderValue("Categoria");
-            tb_relatorio.getColumnModel().getColumn(2).setHeaderValue("Data");
-            tb_relatorio.getColumnModel().getColumn(3).setHeaderValue("Valor");
-        }
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -410,6 +377,7 @@ public class RelatorioDespesa extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu5MouseClicked
 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton7;
     private javax.swing.JMenu jMenu1;
@@ -429,6 +397,6 @@ public class RelatorioDespesa extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tb_relatorio;
+    public static javax.swing.JTable tb_relatorio;
     // End of variables declaration//GEN-END:variables
 }

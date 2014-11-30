@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dlp.view;
 
 import dlp.model.*;
@@ -13,12 +12,14 @@ import javax.swing.JFrame;
  *
  * @author USUARIO
  */
-public class Menu extends javax.swing.JFrame {
+public class Menu extends javax.swing.JFrame
+{
 
     /**
      * Creates new form Menu
      */
-    public Menu() {
+    public Menu()
+    {
         initComponents();
     }
 
@@ -509,35 +510,35 @@ public class Menu extends javax.swing.JFrame {
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
 
-        AddReceita frame = new AddReceita();  
+        AddReceita frame = new AddReceita();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        AddDespesa frame = new AddDespesa();  
+        AddDespesa frame = new AddDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
-        AddReceita frame = new AddReceita();  
+        AddReceita frame = new AddReceita();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
 
-        RelatorioReceita frame = new RelatorioReceita();  
+        RelatorioReceita frame = new RelatorioReceita();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-        RelatorioDespesa frame = new RelatorioDespesa();  
+        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -550,97 +551,98 @@ public class Menu extends javax.swing.JFrame {
 
     private void jMenuItem3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem3MouseClicked
 
-        AddReceita frame = new AddReceita();  
+        AddReceita frame = new AddReceita();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem3MouseClicked
 
     private void jMenuItem4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem4MouseClicked
 
-        AddDespesa frame = new AddDespesa();  
+        AddDespesa frame = new AddDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4MouseClicked
 
     private void jMenuItem5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem5MouseClicked
 
-        RelatorioReceita frame = new RelatorioReceita();  
+        RelatorioReceita frame = new RelatorioReceita();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5MouseClicked
 
     private void jMenuItem6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem6MouseClicked
 
-        RelatorioDespesa frame = new RelatorioDespesa();  
+        RelatorioDespesa frame = new RelatorioDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6MouseClicked
 
     private void jMenuItem8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem8MouseClicked
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();  
+        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8MouseClicked
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
 
-        AddDespesa frame = new AddDespesa();  
+        AddDespesa frame = new AddDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
 
-        RelatorioReceita frame = new RelatorioReceita();  
+        RelatorioReceita frame = new RelatorioReceita();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
 
-        RelatorioDespesa frame = new RelatorioDespesa();  
+        RelatorioDespesa frame = new RelatorioDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();  
+        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
 
-        CategoriaReceita frame = new CategoriaReceita();  
+        CategoriaReceita frame = new CategoriaReceita();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
 
-        CategoriaDespesa frame = new CategoriaDespesa();  
+        CategoriaDespesa frame = new CategoriaDespesa();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem10ActionPerformed
 
     private void jMenu4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu4ActionPerformed
 
-        Sobre frame = new Sobre();  
+        Sobre frame = new Sobre();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenu4ActionPerformed
 
     private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
         // TODO add your handling code here:
-        Sobre frame = new Sobre();  
+        Sobre frame = new Sobre();
         frame.setVisible(true);
     }//GEN-LAST:event_jMenu4MouseClicked
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton5ActionPerformed
     {//GEN-HEADEREND:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+        RelatorioDespesa frame = new RelatorioDespesa();
+        frame.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -682,8 +684,8 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JRadioButtonMenuItem jRadioButtonMenuItem1;
-    private javax.swing.JLabel lb_despesas;
-    private javax.swing.JLabel lb_receitas;
-    private javax.swing.JLabel lb_saldoAcumulado;
+    public static javax.swing.JLabel lb_despesas;
+    public static javax.swing.JLabel lb_receitas;
+    public static javax.swing.JLabel lb_saldoAcumulado;
     // End of variables declaration//GEN-END:variables
 }

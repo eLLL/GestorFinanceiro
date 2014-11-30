@@ -41,6 +41,16 @@ public class Saldo
         despesas += valor;
     }
 
+    static void removeDespesa(double valor)
+    {
+        despesas -= valor;
+    }
+
+    static void removeReceita(double valor)
+    {
+        receitas -= valor;
+    }
+
     public static double getMontante()
     {
         return receitas - despesas;

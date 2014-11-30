@@ -3,20 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dlp.view;
+
+import dlp.control.*;
+import dlp.model.*;
+import static dlp.view.RelatorioDespesa.tb_relatorio;
 
 /**
  *
  * @author USUARIO
  */
-public class RelatorioReceitaDespesa extends javax.swing.JFrame {
+public class RelatorioReceitaDespesa extends javax.swing.JFrame
+{
 
     /**
      * Creates new form RelatorioReceitaDespesa
      */
-    public RelatorioReceitaDespesa() {
+    public RelatorioReceitaDespesa()
+    {
         initComponents();
+        SetupRemoveButtonGeral.setup(tb_relatorio);
     }
 
     /**
@@ -53,42 +59,7 @@ public class RelatorioReceitaDespesa extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Relatório Geral", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
-        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
-                {"Trabalho", "Salário", "01/06/2014",  new Double(8000.0), "Receita"},
-                {"Almoço", "Alimentação", "01/06/2014",  new Double(10.0), "Despesa"},
-                {"Almoço", "Alimentação", "05/06/2014",  new Double(7.5), "Despesa"},
-                {"Almoço", "Alimentação", "09/06/2014",  new Double(12.9), "Despesa"},
-                {"Compras mês", "Mercado", "15/06/2014",  new Double(150.0), "Despesa"},
-                {"Trabalho", "Salário", "01/07/2014",  new Double(7500.0), "Receita"},
-                {"Camisas", "Roupas", "01/07/2014",  new Double(350.4), "Despesa"},
-                {"Janta", "Alimentação", "02/07/2014",  new Double(76.9), "Despesa"},
-                {"Trabalho", "Salário", "01/08/2014",  new Double(5000.0), "Receita"},
-                {"Almoço", "Alimentação", "08/08/2014",  new Double(15.9), "Despesa"},
-                {"Lanche", "Alimentação", "12/08/2014",  new Double(11.0), "Despesa"},
-                {"Trabalho", "Salário", "01/09/2014",  new Double(12000.0), "Receita"},
-                {"Compras", "Mercado", "01/09/2014",  new Double(176.5), "Despesa"},
-                {"Almoço", "Alimentação", "15/09/2014",  new Double(9.5), "Despesa"},
-                {"Almoço", "Alimentação", "17/09/2014",  new Double(13.4), "Despesa"},
-                {"Func. mês", "Prêmio", "31/09/2014",  new Double(500.0), "Receita"}
-            },
-            new String []
-            {
-                "Descrição", "Categoria", "Data", "Valor", "Tipo"
-            }
-        )
-        {
-            Class[] types = new Class []
-            {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.String.class
-            };
-
-            public Class getColumnClass(int columnIndex)
-            {
-                return types [columnIndex];
-            }
-        });
+        tb_relatorio.setModel(new RelatorioTableModel(TipoOperacao.GERAL));
         jScrollPane1.setViewportView(tb_relatorio);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ferramentas"));
@@ -122,7 +93,7 @@ public class RelatorioReceitaDespesa extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addContainerGap()
@@ -431,6 +402,6 @@ public class RelatorioReceitaDespesa extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tb_relatorio;
+    public static javax.swing.JTable tb_relatorio;
     // End of variables declaration//GEN-END:variables
 }

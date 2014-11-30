@@ -68,6 +68,44 @@ public class Manager
         return cats;
     }
 
+    static Operacao getOperacaoList(int id)
+    {
+
+        for (Map.Entry<Integer, Operacao> operacao : operacoes.entrySet())
+        {
+            Operacao value = operacao.getValue();
+
+            if (value.getId() == id)
+            {
+                return value;
+            }
+        }
+
+        return null;
+
+    }
+
+    public static List<Operacao> getOperacaoList(TipoOperacao tipo)
+    {
+        List<Operacao> ops = new ArrayList<>();
+
+        for (Map.Entry<Integer, Operacao> operacao : operacoes.entrySet())
+        {
+            Operacao value = operacao.getValue();
+
+            if (tipo == TipoOperacao.GERAL)
+            {
+                ops.add(value);
+            }
+            else if (value.getCategoria().getTipo() == tipo)
+            {
+                ops.add(value);
+            }
+        }
+
+        return ops;
+    }
+
     public static double getSaldo()
     {
         return saldo;

@@ -6,6 +6,12 @@
 
 package dlp.view;
 
+
+import dlp.control.*;
+import dlp.model.*;
+import static dlp.view.RelatorioDespesa.tb_relatorio;
+
+
 /**
  *
  * @author USUARIO
@@ -17,6 +23,7 @@ public class RelatorioReceita extends javax.swing.JFrame {
      */
     public RelatorioReceita() {
         initComponents();
+        SetupRemoveButtonReceita.setup(tb_relatorio);
     }
 
     /**
@@ -53,31 +60,7 @@ public class RelatorioReceita extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Relatório de Receitas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
-        tb_relatorio.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][]
-            {
-                {"Trabalho", "Salário", "01/06/2014",  new Double(8000.0)},
-                {"Trabalho", "Salário", "01/07/2014",  new Double(7500.0)},
-                {"Trabalho", "Salário", "01/08/2014",  new Double(5000.0)},
-                {"Func. mês", "Prêmio", "31/08/2014",  new Double(500.0)},
-                {"Trabalho", "Salário", "01/09/2014",  new Double(12000.0)}
-            },
-            new String []
-            {
-                "Descrição", "Categoria", "Data", "Valor"
-            }
-        )
-        {
-            Class[] types = new Class []
-            {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class
-            };
-
-            public Class getColumnClass(int columnIndex)
-            {
-                return types [columnIndex];
-            }
-        });
+        tb_relatorio.setModel(new RelatorioTableModel(TipoOperacao.RECEITA));
         jScrollPane1.setViewportView(tb_relatorio);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ferramentas"));
@@ -111,7 +94,7 @@ public class RelatorioReceita extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 368, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 688, Short.MAX_VALUE)
             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
@@ -413,6 +396,6 @@ public class RelatorioReceita extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tb_relatorio;
+    public static javax.swing.JTable tb_relatorio;
     // End of variables declaration//GEN-END:variables
 }
