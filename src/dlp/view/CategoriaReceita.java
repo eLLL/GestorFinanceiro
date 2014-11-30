@@ -1,7 +1,8 @@
 package dlp.view;
 
-import dlp.control.AddCategoria;
-import dlp.model.CorComboModel;
+import dlp.control.*;
+import dlp.model.*;
+import javax.swing.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -320,7 +321,14 @@ public class CategoriaReceita extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
-        AddCategoria.AddReceita(evt);
+        if (txt_nome.getText().equals("") || slct_cor.getSelectedItem() == null)
+        {
+            JOptionPane.showMessageDialog(null, "Os campos devem ser preenchidos!");
+        }
+        else
+        {
+            AddCategoria.AddReceita(evt);;
+        }
     }//GEN-LAST:event_btn_salvarActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed

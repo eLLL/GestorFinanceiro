@@ -5,10 +5,9 @@
  */
 package dlp.view;
 
-import dlp.control.AddCategoria;
-import dlp.model.Cor;
-import dlp.model.CorComboModel;
-import javax.swing.JComboBox;
+import dlp.control.*;
+import dlp.model.*;
+import javax.swing.*;
 
 /**
  *
@@ -324,8 +323,14 @@ public class CategoriaDespesa extends javax.swing.JFrame
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
-
-        AddCategoria.AddDespesa(evt);
+        if (txt_nome.getText().equals("") || slct_cor.getSelectedItem() == null)
+        {
+            JOptionPane.showMessageDialog(null, "Os campos devem ser preenchidos!");
+        }
+        else
+        {
+            AddCategoria.AddDespesa(evt);
+        }
     }//GEN-LAST:event_btn_salvarActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed

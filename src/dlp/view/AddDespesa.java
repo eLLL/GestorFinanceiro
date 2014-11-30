@@ -9,6 +9,7 @@ import dlp.control.AddOperacao;
 import dlp.model.CategoriaComboModel;
 import dlp.model.TipoOperacao;
 import static dlp.view.AddReceita.slct_categoria;
+import javax.swing.*;
 
 /**
  *
@@ -408,7 +409,14 @@ public class AddDespesa extends javax.swing.JFrame
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
-        AddOperacao.addDespesa(evt);
+        if (!txt_data.getText().equals("") || !txt_descricao.getText().equals("") || !txt_valor.getText().equals(""))
+        {
+            AddOperacao.addDespesa(evt);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Os campos não podem estar fazios!");
+        }
     }//GEN-LAST:event_btn_salvarActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed

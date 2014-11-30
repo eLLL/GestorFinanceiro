@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package dlp.view;
 
 import dlp.control.AddOperacao;
@@ -11,17 +10,23 @@ import dlp.control.Manager;
 import dlp.model.CategoriaComboModel;
 import dlp.model.TipoOperacao;
 import static dlp.view.AddDespesa.slct_categoria;
+import static dlp.view.AddDespesa.txt_data;
+import static dlp.view.AddDespesa.txt_descricao;
+import static dlp.view.AddDespesa.txt_valor;
+import javax.swing.*;
 
 /**
  *
  * @author USUARIO
  */
-public class AddReceita extends javax.swing.JFrame {
+public class AddReceita extends javax.swing.JFrame
+{
 
     /**
      * Creates new form AddReceita
      */
-    public AddReceita() {
+    public AddReceita()
+    {
         initComponents();
     }
 
@@ -388,7 +393,14 @@ public class AddReceita extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
-        AddOperacao.addReceita(evt);
+        if (!txt_data.getText().equals("") || !txt_descricao.getText().equals("") || !txt_valor.getText().equals(""))
+        {
+            AddOperacao.addReceita(evt);
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null, "Os campos não podem estar fazios!");
+        }
     }//GEN-LAST:event_btn_salvarActionPerformed
 
     private void btn_cancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_cancelarActionPerformed
