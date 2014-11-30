@@ -13,7 +13,6 @@ public class Manager
 
     private static HashMap<Integer, Operacao> operacoes = new HashMap<>();
     private static HashMap<Integer, Categoria> categorias = new HashMap<>();
-    private static double saldo;
 
     public Manager()
     {
