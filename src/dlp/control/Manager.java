@@ -13,7 +13,6 @@ public class Manager
 
     private static HashMap<Integer, Operacao> operacoes = new HashMap<>();
     private static HashMap<Integer, Categoria> categorias = new HashMap<>();
-    private static double saldo;
 
     public Manager()
     {
@@ -105,17 +104,7 @@ public class Manager
 
         return ops;
     }
-
-    public static double getSaldo()
-    {
-        return saldo;
-    }
-
-    public static void setSaldo(double saldo)
-    {
-        Manager.saldo = saldo;
-    }
-
+    
     public static Categoria getCategoria(String nome)
     {
         for (Map.Entry<Integer, Categoria> categoria : categorias.entrySet())
