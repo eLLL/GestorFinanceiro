@@ -1,5 +1,6 @@
 package dlp.control;
 
+import dlp.model.*;
 import dlp.model.Categoria;
 import dlp.model.Cor;
 import dlp.model.Operacao;
@@ -84,42 +85,40 @@ public class DAO
             c.setNome(rs.getString("nome"));
             c.setTipo(TipoOperacao.valueOf(rs.getString("tipo")));
             c.setCor(Cor.valueOf(rs.getString("cor")));
-            
+
             Manager.getCategorias().put(c.getId(), c);
         }
 
-        String sql2 = String.format("SELECT * FROM categoria");
+        String sql2 = String.format("SELECT * FROM operacao");
 
-        PreparedStatement pstmt2 = con.prepareStatement(sql);
+        PreparedStatement pstmt2 = con.prepareStatement(sql2);
         ResultSet rs2 = pstmt2.executeQuery();
 
         while (rs2.next())
         {
             Operacao o = new Operacao();
-            
-            o.setId(rs.getInt("id_operacao"));
-            o.setCategoria(Manager.getCategorias().get(rs.getInt("id_categoria")));
-            o.setDescricao(rs.getString("descricao"));
-            
+
+            o.setId(rs2.getInt("id_operacao"));
+            o.setCategoria(Manager.getCategorias().get(rs2.getInt("id_categoria")));
+            o.setDescricao(rs2.getString("descricao"));
+
             Calendar c = Calendar.getInstance();
-            c.setTime(rs.getDate("data"));
-            
+            c.setTime(rs2.getDate("data"));
+
             o.setData(c);
-            
-            o.setValor(rs.getDouble("valor"));
-            
+
+            o.setValor(rs2.getDouble("valor"));
+
             Manager.getOperacoes().put(o.getId(), o);
-            
+
             if (o.getCategoria().getTipo() == TipoOperacao.DESPESA)
             {
-                Manager.setSaldo(Manager.getSaldo() - o.getValor());
-            } else
+                Saldo.addDespesa(o.getValor());
+            }
+            else
             {
-                Manager.setSaldo(Manager.getSaldo() + o.getValor());
+                Saldo.addReceita(o.getValor());
             }
         }
-        
-        
     }
-
 }
