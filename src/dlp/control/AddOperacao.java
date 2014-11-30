@@ -24,41 +24,27 @@ public class AddOperacao
 
     public static void addDespesa(ActionEvent evt)
     {
-
-        Operacao operacao = new Operacao();
-
-        operacao.setDescricao(AddDespesa.txt_descricao.getText());
-        operacao.setValor(Double.valueOf(AddDespesa.txt_valor.getText()));
-        operacao.setCategoria(Manager.getCategoria(AddDespesa.slct_categoria.getSelectedItem().toString()));
-
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        try
-        {
-            Calendar c = Calendar.getInstance();
-            c.setTime(format.parse(AddDespesa.txt_data.getText()));
-            operacao.setData(c);
-        } catch (ParseException ex)
-        {
-            Logger.getLogger(AddOperacao.class.getName()).log(Level.SEVERE, null, ex);
-        }
-
-        operacao.addBD();
+        add(AddDespesa.txt_descricao.getText(), AddDespesa.txt_valor.getText(), AddDespesa.slct_categoria.getSelectedItem().toString(), AddDespesa.txt_data.getText());
     }
 
     public static void addReceita(ActionEvent evt)
     {
+        add(AddReceita.txt_descricao.getText(), AddReceita.txt_valor.getText(), AddReceita.slct_categoria.getSelectedItem().toString(), AddReceita.txt_data.getText());
+    }
 
+    private static void add(String descricao, String valor, String categoria, String data)
+    {
         Operacao operacao = new Operacao();
 
-        operacao.setDescricao(AddReceita.txt_descricao.getText());
-        operacao.setValor(Double.valueOf(AddReceita.txt_valor.getText()));
-        operacao.setCategoria(Manager.getCategoria(AddReceita.slct_categoria.getSelectedItem().toString()));
+        operacao.setDescricao(descricao);
+        operacao.setValor(Double.valueOf(valor));
+        operacao.setCategoria(Manager.getCategoria(categoria));
 
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         try
         {
             Calendar c = Calendar.getInstance();
-            c.setTime(format.parse(AddReceita.txt_data.getText()));
+            c.setTime(format.parse(data));
             operacao.setData(c);
         } catch (ParseException ex)
         {
