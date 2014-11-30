@@ -2,35 +2,46 @@ package dlp.model;
 
 public class Saldo
 {
-    private double receitas;
-    private double despesas;
+
+    private static double receitas;
+    private static double despesas;
 
     public Saldo()
     {
 
     }
 
-    public double getReceitas()
+    public static double getReceitas()
     {
         return receitas;
     }
 
-    public void setReceitas(double receitas)
+    public static void setReceitas(double valor)
     {
-        this.receitas = receitas;
+        receitas = valor;
     }
 
-    public double getDespesas()
+    public static double getDespesas()
     {
         return despesas;
     }
 
-    public void setDespesas(double despesas)
+    public static void setDespesas(double valor)
     {
-        this.despesas = despesas;
+        despesas = valor;
     }
 
-    protected double calcular()
+    public static void addReceita(double valor)
+    {
+        receitas += valor;
+    }
+
+    public static void addDespesa(double valor)
+    {
+        despesas += valor;
+    }
+
+    public static double getMontante()
     {
         return receitas - despesas;
     }
