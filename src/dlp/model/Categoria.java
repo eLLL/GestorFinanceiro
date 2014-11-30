@@ -79,14 +79,12 @@ public class Categoria
             stmt = con.createStatement();
             String sql = String.format("INSERT INTO Categoria VALUES (DEFAULT, '%s', '%s', '%s');", this.nome,
                     this.tipo.toString(), cor.toString());
-            stmt.executeUpdate(sql);
 
             stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
 
             ResultSet rs = stmt.getGeneratedKeys();
             if (rs.next())
             {
-                // Retrieve the auto generated key(s).
                 this.id = rs.getInt(1);
             }
 
@@ -94,18 +92,15 @@ public class Categoria
             Manager.getCategorias().put(id, this);
 
             return true;
-        }
-        catch (Exception ex)
+        } catch (Exception ex)
         {
             ex.printStackTrace();
-        }
-        finally
+        } finally
         {
             try
             {
                 stmt.close();
-            }
-            catch (SQLException ex)
+            } catch (SQLException ex)
             {
                 Logger.getLogger(Categoria.class.getName()).log(Level.SEVERE, null, ex);
             }

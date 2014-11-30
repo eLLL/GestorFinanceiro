@@ -458,7 +458,7 @@ public class CategoriaReceita extends javax.swing.JFrame
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JComboBox slct_cor;
-    private javax.swing.JTextField txt_nome;
+    public static javax.swing.JComboBox slct_cor;
+    public static javax.swing.JTextField txt_nome;
     // End of variables declaration//GEN-END:variables
 }

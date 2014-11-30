@@ -12,7 +12,6 @@ import dlp.view.CategoriaDespesa;
 import dlp.view.CategoriaReceita;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 /**
  *
