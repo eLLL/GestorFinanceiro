@@ -2,6 +2,7 @@ package dlp.control;
 
 import dlp.model.Categoria;
 import dlp.model.Cor;
+import dlp.model.Operacao;
 import dlp.model.TipoOperacao;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -86,6 +88,38 @@ public class DAO
             Manager.getCategorias().put(c.getId(), c);
         }
 
+        String sql2 = String.format("SELECT * FROM categoria");
+
+        PreparedStatement pstmt2 = con.prepareStatement(sql);
+        ResultSet rs2 = pstmt2.executeQuery();
+
+        while (rs2.next())
+        {
+            Operacao o = new Operacao();
+            
+            o.setId(rs.getInt("id_operacao"));
+            o.setCategoria(Manager.getCategorias().get(rs.getInt("id_categoria")));
+            o.setDescricao(rs.getString("descricao"));
+            
+            Calendar c = Calendar.getInstance();
+            c.setTime(rs.getDate("data"));
+            
+            o.setData(c);
+            
+            o.setValor(rs.getDouble("valor"));
+            
+            Manager.getOperacoes().put(o.getId(), o);
+            
+            if (o.getCategoria().getTipo() == TipoOperacao.DESPESA)
+            {
+                Manager.setSaldo(Manager.getSaldo() - o.getValor());
+            } else
+            {
+                Manager.setSaldo(Manager.getSaldo() + o.getValor());
+            }
+        }
+        
+        
     }
 
 }

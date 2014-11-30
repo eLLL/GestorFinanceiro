@@ -8,7 +8,6 @@ import dlp.view.CategoriaReceita;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
-
 public class AddCategoria
 {
 
@@ -31,10 +30,11 @@ public class AddCategoria
 
         if (categoria.addBD())
         {
-            JOptionPane.showMessageDialog(null, "Categoria inserida com sucesso");
-        } else
+            JOptionPane.showMessageDialog(null, "Categoria inserida com sucesso!");
+        }
+        else
         {
-            JOptionPane.showMessageDialog(null, "Erro ao inserir categoria");
+            JOptionPane.showMessageDialog(null, "Erro ao inserir categoria!");
         }
     }
 
