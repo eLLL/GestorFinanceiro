@@ -208,7 +208,6 @@ public class Sobre extends javax.swing.JFrame {
         });
         jMenuBar2.add(jMenu12);
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gerenciador Financeiro - Sobre");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Sobre"));

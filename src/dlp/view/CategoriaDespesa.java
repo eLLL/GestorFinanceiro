@@ -6,6 +6,9 @@
 package dlp.view;
 
 import dlp.control.AddCategoria;
+import dlp.model.Cor;
+import dlp.model.CorComboModel;
+import javax.swing.JComboBox;
 
 /**
  *
@@ -56,7 +59,6 @@ public class CategoriaDespesa extends javax.swing.JFrame
         jMenu4 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gerenciador Financeiro - Categoria Despesa");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nova Categoria de Despesa", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
@@ -67,7 +69,7 @@ public class CategoriaDespesa extends javax.swing.JFrame
 
         jLabel2.setText("Cor");
 
-        slct_cor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Amarelo", "Azul", "Laranja", "Verde", "Vermelho" }));
+        slct_cor.setModel(new CorComboModel());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

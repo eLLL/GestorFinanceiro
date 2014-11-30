@@ -1,6 +1,7 @@
 package dlp.view;
 
 import dlp.control.AddCategoria;
+import dlp.model.CorComboModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -56,7 +57,6 @@ public class CategoriaReceita extends javax.swing.JFrame
         jMenu4 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gerenciador Financeiro - Categoria Receita");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Nova Categoria de Receita", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
@@ -67,7 +67,7 @@ public class CategoriaReceita extends javax.swing.JFrame
 
         jLabel2.setText("Cor");
 
-        slct_cor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Amarelo", "Azul", "Branco", "Laranja", "Verde", "Vermelho", "Preto", "Roxo" }));
+        slct_cor.setModel(new CorComboModel());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

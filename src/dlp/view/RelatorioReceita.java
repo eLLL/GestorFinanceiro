@@ -49,7 +49,6 @@ public class RelatorioReceita extends javax.swing.JFrame {
         jMenu4 = new javax.swing.JMenu();
         jMenu5 = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Gerenciador Financeiro - Relatório Receita");
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Relatório de Receitas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N

@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dlp.control;
 
 import dlp.model.Categoria;
@@ -13,10 +8,7 @@ import dlp.view.CategoriaReceita;
 import java.awt.event.ActionEvent;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Lucas
- */
+
 public class AddCategoria
 {
 
@@ -39,11 +31,10 @@ public class AddCategoria
 
         if (categoria.addBD())
         {
-            JOptionPane.showConfirmDialog(null, "Inserido com sucesso");
-        }
-        else
+            JOptionPane.showMessageDialog(null, "Categoria inserida com sucesso");
+        } else
         {
-            JOptionPane.showMessageDialog(null, "Erro ao inserir");
+            JOptionPane.showMessageDialog(null, "Erro ao inserir categoria");
         }
     }
 

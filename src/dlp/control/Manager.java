@@ -2,7 +2,10 @@ package dlp.control;
 
 import dlp.model.Categoria;
 import dlp.model.Operacao;
+import dlp.model.TipoOperacao;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Manager
@@ -35,6 +38,34 @@ public class Manager
     public static void setCategorias(HashMap<Integer, Categoria> categorias)
     {
         Manager.categorias = categorias;
+    }
+
+    public static List<Categoria> getCagetoriaList()
+    {
+        List<Categoria> cats = new ArrayList<>();
+
+        for (Map.Entry<Integer, Categoria> categoria : categorias.entrySet())
+        {
+            cats.add(categoria.getValue());
+        }
+
+        return cats;
+    }
+
+    public static List<Categoria> getCagetoriaList(TipoOperacao tipo)
+    {
+        List<Categoria> cats = new ArrayList<>();
+
+        for (Map.Entry<Integer, Categoria> categoria : categorias.entrySet())
+        {
+            Categoria value = categoria.getValue();
+            if (value.getTipo() == tipo)
+            {
+                cats.add(value);
+            }
+        }
+
+        return cats;
     }
 
     public static double getSaldo()

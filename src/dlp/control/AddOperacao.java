@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dlp.control;
 
 import dlp.model.Operacao;
@@ -37,7 +32,7 @@ public class AddOperacao
         Operacao operacao = new Operacao();
 
         operacao.setDescricao(descricao);
-        operacao.setValor(Double.valueOf(valor));
+        operacao.setValor(Double.valueOf(valor.replace(',','.')));
         operacao.setCategoria(Manager.getCategoria(categoria));
 
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");

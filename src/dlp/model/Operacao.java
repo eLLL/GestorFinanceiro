@@ -92,6 +92,8 @@ public class Operacao
     public boolean addBD()
     {
         Statement stmt = null;
+        String sql = "";
+
         try
         {
             Connection con = DAO.getConnection();
@@ -101,8 +103,8 @@ public class Operacao
             String data = this.data.get(Calendar.YEAR) + "-" + this.data.get(Calendar.MONTH) + "-"
                     + this.data.get(Calendar.DAY_OF_MONTH);
 
-            String sql = String.format("INSERT INTO Operacao VALUES(DEFAULT, %d, '%s', '%s', %.2f);",
-                    this.categoria.getId(), this.descricao, data, this.valor);
+            sql = String.format("INSERT INTO Operacao VALUES(DEFAULT, %d, '%s', '%s', '%s');",
+                    this.categoria.getId(), this.descricao, data, String.valueOf(valor).replace(",", "."));
 
             stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
 
@@ -127,6 +129,7 @@ public class Operacao
         } catch (Exception ex)
         {
             ex.printStackTrace();
+            System.out.println("SQL: " + sql);
         } finally
         {
             try

@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package dlp.control;
 
 import dlp.view.Menu;
 
-/**
- *
- * @author Matheus
- */
 public class Main
 {
 
@@ -19,10 +10,11 @@ public class Main
      */
     public static void main(String[] args)
     {
-        new DAO();
+        DAO dao = new DAO();
 
         java.awt.EventQueue.invokeLater(new Runnable()
         {
+            @Override
             public void run()
             {
                 new Menu().setVisible(true);
