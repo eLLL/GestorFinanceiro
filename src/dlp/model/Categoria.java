@@ -3,9 +3,7 @@ package dlp.model;
 import dlp.control.DAO;
 import dlp.control.Manager;
 import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -79,8 +77,8 @@ public class Categoria
             Connection con = DAO.getConnection();
 
             stmt = con.createStatement();
-            String sql = String.format("INSERT INTO Categoria VALUES (DEFAULT, '%s', '%s', '%s');", this.nome, cor.toString(),
-                    this.tipo.toString());
+            String sql = String.format("INSERT INTO Categoria VALUES (DEFAULT, '%s', '%s', '%s');", this.nome,
+                    this.tipo.toString(), cor.toString());
             stmt.executeUpdate(sql);
 
             stmt.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
@@ -96,15 +94,18 @@ public class Categoria
             Manager.getCategorias().put(id, this);
 
             return true;
-        } catch (Exception ex)
+        }
+        catch (Exception ex)
         {
             ex.printStackTrace();
-        } finally
+        }
+        finally
         {
             try
             {
                 stmt.close();
-            } catch (SQLException ex)
+            }
+            catch (SQLException ex)
             {
                 Logger.getLogger(Categoria.class.getName()).log(Level.SEVERE, null, ex);
             }
