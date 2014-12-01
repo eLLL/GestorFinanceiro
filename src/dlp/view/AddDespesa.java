@@ -5,10 +5,8 @@
  */
 package dlp.view;
 
-import dlp.control.AddOperacao;
-import dlp.model.CategoriaComboModel;
-import dlp.model.TipoOperacao;
-import static dlp.view.AddReceita.slct_categoria;
+import dlp.control.*;
+import dlp.model.*;
 import javax.swing.*;
 
 /**

@@ -6,7 +6,6 @@
 package dlp.view;
 
 import dlp.model.*;
-import javax.swing.JFrame;
 
 /**
  *

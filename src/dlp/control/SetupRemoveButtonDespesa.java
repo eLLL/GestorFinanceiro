@@ -2,7 +2,6 @@ package dlp.control;
 
 import dlp.model.*;
 import dlp.view.*;
-import static dlp.view.RelatorioDespesa.tb_relatorio;
 import java.awt.event.*;
 import javax.swing.*;
 

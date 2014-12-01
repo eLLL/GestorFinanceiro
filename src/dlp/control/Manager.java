@@ -1,12 +1,7 @@
 package dlp.control;
 
-import dlp.model.Categoria;
-import dlp.model.Operacao;
-import dlp.model.TipoOperacao;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import dlp.model.*;
+import java.util.*;
 
 public class Manager
 {

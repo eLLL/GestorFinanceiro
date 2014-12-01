@@ -5,14 +5,8 @@
  */
 package dlp.view;
 
-import dlp.control.AddOperacao;
-import dlp.control.Manager;
-import dlp.model.CategoriaComboModel;
-import dlp.model.TipoOperacao;
-import static dlp.view.AddDespesa.slct_categoria;
-import static dlp.view.AddDespesa.txt_data;
-import static dlp.view.AddDespesa.txt_descricao;
-import static dlp.view.AddDespesa.txt_valor;
+import dlp.control.*;
+import dlp.model.*;
 import javax.swing.*;
 
 /**

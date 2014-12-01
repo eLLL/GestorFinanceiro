@@ -1,18 +1,14 @@
 package dlp.model;
 
-import java.text.Collator;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
-import java.util.TreeSet;
-import javax.swing.ComboBoxModel;
-import javax.swing.event.ListDataListener;
+import java.text.*;
+import java.util.*;
+import javax.swing.*;
+import javax.swing.event.*;
 
 public class CorComboModel implements ComboBoxModel
 {
 
-    private List<String> cores = new ArrayList<String>();
+    private List<String> cores = new ArrayList<>();
     private Cor selectedCor;
 
     public CorComboModel()

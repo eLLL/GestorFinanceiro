@@ -1,11 +1,8 @@
 package dlp.model;
 
-import dlp.control.DAO;
-import dlp.control.Manager;
-import java.sql.Connection;
+import dlp.control.*;
 import java.sql.*;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.util.logging.*;
 
 public class Categoria
 {

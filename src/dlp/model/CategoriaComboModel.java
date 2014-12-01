@@ -1,9 +1,9 @@
 package dlp.model;
 
-import dlp.control.Manager;
-import java.util.List;
-import javax.swing.ComboBoxModel;
-import javax.swing.event.ListDataListener;
+import dlp.control.*;
+import java.util.*;
+import javax.swing.*;
+import javax.swing.event.*;
 
 public class CategoriaComboModel implements ComboBoxModel
 {

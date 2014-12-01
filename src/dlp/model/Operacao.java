@@ -1,14 +1,9 @@
 package dlp.model;
 
-import dlp.control.DAO;
-import dlp.control.Manager;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import dlp.control.*;
+import java.sql.*;
+import java.util.*;
+import java.util.logging.*;
 
 public class Operacao
 {

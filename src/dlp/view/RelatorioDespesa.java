@@ -7,7 +7,6 @@ package dlp.view;
 
 import dlp.control.*;
 import dlp.model.*;
-import javax.swing.*;
 
 
 
