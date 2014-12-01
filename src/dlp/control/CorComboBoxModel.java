@@ -6,13 +6,13 @@ import java.util.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-public class CorComboModel implements ComboBoxModel
+public class CorComboBoxModel implements ComboBoxModel
 {
 
     private List<String> cores = new ArrayList<>();
     private Cor selectedCor;
 
-    public CorComboModel()
+    public CorComboBoxModel()
     {
         for (Cor cor : Cor.values())
         {

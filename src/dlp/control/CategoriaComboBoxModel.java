@@ -1,19 +1,17 @@
 package dlp.control;
 
-import dlp.control.*;
-import dlp.model.Categoria;
-import dlp.model.TipoOperacao;
+import dlp.model.*;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-public class CategoriaComboModel implements ComboBoxModel
+public class CategoriaComboBoxModel implements ComboBoxModel
 {
 
     private List<Categoria> categorias;
     private Categoria selectedCategoria;
 
-    public CategoriaComboModel(TipoOperacao tipo)
+    public CategoriaComboBoxModel(TipoOperacao tipo)
     {
         categorias = Manager.getCagetoriaList(tipo);
         selectedCategoria = categorias.get(0);

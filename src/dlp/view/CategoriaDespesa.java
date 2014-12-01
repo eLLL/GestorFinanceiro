@@ -5,7 +5,7 @@
  */
 package dlp.view;
 
-import dlp.control.CorComboModel;
+import dlp.control.CorComboBoxModel;
 import dlp.control.*;
 import dlp.model.*;
 import javax.swing.*;
@@ -68,7 +68,7 @@ public class CategoriaDespesa extends javax.swing.JFrame
 
         jLabel2.setText("Cor");
 
-        slct_cor.setModel(new CorComboModel());
+        slct_cor.setModel(new CorComboBoxModel());
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);

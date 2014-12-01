@@ -59,6 +59,7 @@ public class RelatorioGeral extends javax.swing.JFrame
 
         tb_relatorio.setModel(new dlp.control.ModeloTabelaRelatorio(TipoOperacao.GERAL));
         jScrollPane1.setViewportView(tb_relatorio);
+        tb_relatorio.setDefaultRenderer(Object.class, new RelatorioTableCellRenderer());
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ferramentas"));
 

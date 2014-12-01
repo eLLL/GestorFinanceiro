@@ -49,7 +49,7 @@ public class SetupRemoveButtonReceita implements ActionListener
         {
             int row = RelatorioReceita.tb_relatorio.getSelectedRow();
 
-            int selectedObject = (Integer) RelatorioReceita.tb_relatorio.getModel().getValueAt(row, 0);
+            int selectedObject = (Integer) RelatorioReceita.tb_relatorio.getModel().getValueAt(row, 1);
 
             System.out.println(selectedObject);
 

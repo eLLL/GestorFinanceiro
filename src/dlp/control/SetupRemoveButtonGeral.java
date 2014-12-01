@@ -49,7 +49,7 @@ public class SetupRemoveButtonGeral implements ActionListener
         {
             int row = RelatorioGeral.tb_relatorio.getSelectedRow();
 
-            int selectedObject = (Integer) RelatorioGeral.tb_relatorio.getModel().getValueAt(row, 0);
+            int selectedObject = (Integer) RelatorioGeral.tb_relatorio.getModel().getValueAt(row, 1);
 
             System.out.println(selectedObject);
 

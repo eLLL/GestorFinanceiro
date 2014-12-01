@@ -59,8 +59,9 @@ public class RelatorioReceita extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Relatório de Receitas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
-        tb_relatorio.setModel(new ModeloTabelaRelatorio(TipoOperacao.RECEITA));
+        tb_relatorio.setModel(new dlp.control.ModeloTabelaRelatorio(TipoOperacao.RECEITA));
         jScrollPane1.setViewportView(tb_relatorio);
+        tb_relatorio.setDefaultRenderer(Object.class, new RelatorioTableCellRenderer());
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ferramentas"));
 

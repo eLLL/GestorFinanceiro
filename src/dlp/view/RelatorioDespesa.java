@@ -83,8 +83,9 @@ public class RelatorioDespesa extends javax.swing.JFrame
             .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
-        tb_relatorio.setModel(new ModeloTabelaRelatorio(TipoOperacao.DESPESA));
+        tb_relatorio.setModel(new dlp.control.ModeloTabelaRelatorio(TipoOperacao.DESPESA));
         jScrollPane1.setViewportView(tb_relatorio);
+        tb_relatorio.setDefaultRenderer(Object.class, new RelatorioTableCellRenderer());
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

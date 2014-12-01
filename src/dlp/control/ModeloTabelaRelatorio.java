@@ -14,11 +14,11 @@ public class ModeloTabelaRelatorio extends AbstractTableModel
 
     final String[] columnNames =
     {
-        "ID", "Descrição", "Categoria", "Data", "Valor"
+        "Cor", "ID", "Descrição", "Categoria", "Data", "Valor"
     };
     final Class[] columnClasses =
     {
-        Integer.class, String.class, String.class, String.class, String.class
+        Object.class, Integer.class, String.class, String.class, String.class, String.class
     };
     final Vector data = new Vector();
 
@@ -57,23 +57,23 @@ public class ModeloTabelaRelatorio extends AbstractTableModel
     public Object getValueAt(int row, int col)
     {
         Operacao operacao = (Operacao) data.elementAt(row);
-        if (col == 0)
+        if (col == 1)
         {
             return operacao.getId();
         }
-        else if (col == 1)
+        else if (col == 2)
         {
             return operacao.getDescricao();
         }
-        else if (col == 2)
+        else if (col == 3)
         {
             return operacao.getCategoria().getNome();
         }
-        else if (col == 3)
+        else if (col == 4)
         {
             return operacao.getData().get(Calendar.DAY_OF_MONTH) + "/" + (operacao.getData().get(Calendar.MONTH) + 1) + "/" + operacao.getData().get(Calendar.YEAR);
         }
-        else if (col == 4)
+        else if (col == 5)
         {
             return String.valueOf(operacao.getValor());
         }

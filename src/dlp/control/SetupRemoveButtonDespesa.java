@@ -49,7 +49,7 @@ public class SetupRemoveButtonDespesa implements ActionListener
         {
             int row = RelatorioDespesa.tb_relatorio.getSelectedRow();
 
-            int selectedObject = (Integer) RelatorioDespesa.tb_relatorio.getModel().getValueAt(row, 0);
+            int selectedObject = (Integer) RelatorioDespesa.tb_relatorio.getModel().getValueAt(row, 1);
 
             System.out.println(selectedObject);
 
