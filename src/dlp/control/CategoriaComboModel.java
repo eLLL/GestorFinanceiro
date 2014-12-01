@@ -1,6 +1,8 @@
-package dlp.model;
+package dlp.control;
 
 import dlp.control.*;
+import dlp.model.Categoria;
+import dlp.model.TipoOperacao;
 import java.util.*;
 import javax.swing.*;
 import javax.swing.event.*;

@@ -16,7 +16,7 @@ public class RemoveOperacao
             Menu.lb_receitas.setText("R$ " + Saldo.getReceitas());
             Menu.lb_saldoAcumulado.setText("R$ " + Saldo.getMontante());
 
-            JOptionPane.showMessageDialog(null, "Registro removido com sucesso!");
+            JOptionPane.showMessageDialog(null, "Registro removido!");
             return true;
         }
         else
@@ -25,5 +25,4 @@ public class RemoveOperacao
             return false;
         }
     }
-
 }

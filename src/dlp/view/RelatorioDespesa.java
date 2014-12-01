@@ -5,6 +5,7 @@
  */
 package dlp.view;
 
+import dlp.control.ModeloTabelaRelatorio;
 import dlp.control.*;
 import dlp.model.*;
 
@@ -82,7 +83,7 @@ public class RelatorioDespesa extends javax.swing.JFrame
             .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
-        tb_relatorio.setModel(new RelatorioTableModel(TipoOperacao.DESPESA));
+        tb_relatorio.setModel(new ModeloTabelaRelatorio(TipoOperacao.DESPESA));
         jScrollPane1.setViewportView(tb_relatorio);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -341,14 +342,14 @@ public class RelatorioDespesa extends javax.swing.JFrame
 
     private void jMenuItem8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem8MouseClicked
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8MouseClicked
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed

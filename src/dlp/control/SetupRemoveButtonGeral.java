@@ -47,15 +47,15 @@ public class SetupRemoveButtonGeral implements ActionListener
         JMenuItem menu = (JMenuItem) event.getSource();
         if (menu.getText().endsWith("Remover"))
         {
-            int row = RelatorioReceitaDespesa.tb_relatorio.getSelectedRow();
+            int row = RelatorioGeral.tb_relatorio.getSelectedRow();
 
-            int selectedObject = (Integer) RelatorioReceitaDespesa.tb_relatorio.getModel().getValueAt(row, 0);
+            int selectedObject = (Integer) RelatorioGeral.tb_relatorio.getModel().getValueAt(row, 0);
 
             System.out.println(selectedObject);
 
             if (RemoveOperacao.remove(selectedObject))
             {
-                RelatorioTableModel model = (RelatorioTableModel) RelatorioReceitaDespesa.tb_relatorio.getModel();
+                ModeloTabelaRelatorio model = (ModeloTabelaRelatorio) RelatorioGeral.tb_relatorio.getModel();
                 model.removeRow(row);
                 model.fireTableDataChanged();
             }

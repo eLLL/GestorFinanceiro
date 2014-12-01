@@ -1,13 +1,13 @@
-package dlp.model;
+package dlp.control;
 
-import dlp.control.*;
+import dlp.model.*;
 import java.util.*;
 import javax.swing.table.*;
 
-public class RelatorioTableModel extends AbstractTableModel
+public class ModeloTabelaRelatorio extends AbstractTableModel
 {
 
-    public RelatorioTableModel(TipoOperacao tipo)
+    public ModeloTabelaRelatorio(TipoOperacao tipo)
     {
         data.addAll(Manager.getOperacaoList(tipo));
     }

@@ -5,6 +5,7 @@
  */
 package dlp.view;
 
+import dlp.control.CategoriaComboModel;
 import dlp.control.*;
 import dlp.model.*;
 import javax.swing.*;
@@ -397,7 +398,7 @@ public class AddReceita extends javax.swing.JFrame
 
             if (inserido)
             {
-                JOptionPane.showMessageDialog(null, "Operação adicionada com sucesso!");
+                JOptionPane.showMessageDialog(null, "Operação adicionada!");
                 setVisible(false);
             }
             else
@@ -485,14 +486,14 @@ public class AddReceita extends javax.swing.JFrame
 
     private void jMenuItem8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem8MouseClicked
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8MouseClicked
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed

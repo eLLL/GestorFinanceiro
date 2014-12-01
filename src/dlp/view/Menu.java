@@ -533,7 +533,7 @@ public class Menu extends javax.swing.JFrame
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
@@ -574,7 +574,7 @@ public class Menu extends javax.swing.JFrame
 
     private void jMenuItem8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem8MouseClicked
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8MouseClicked
@@ -602,7 +602,7 @@ public class Menu extends javax.swing.JFrame
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed

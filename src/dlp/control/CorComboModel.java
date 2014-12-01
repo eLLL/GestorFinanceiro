@@ -1,5 +1,6 @@
-package dlp.model;
+package dlp.control;
 
+import dlp.model.Cor;
 import java.text.*;
 import java.util.*;
 import javax.swing.*;

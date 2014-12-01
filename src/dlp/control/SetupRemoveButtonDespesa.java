@@ -55,7 +55,7 @@ public class SetupRemoveButtonDespesa implements ActionListener
 
             if (RemoveOperacao.remove(selectedObject))
             {
-                RelatorioTableModel model = (RelatorioTableModel) RelatorioDespesa.tb_relatorio.getModel();
+                ModeloTabelaRelatorio model = (ModeloTabelaRelatorio) RelatorioDespesa.tb_relatorio.getModel();
                 model.removeRow(row);
                 model.fireTableDataChanged();
             }

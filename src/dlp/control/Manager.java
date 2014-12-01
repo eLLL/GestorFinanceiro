@@ -99,7 +99,7 @@ public class Manager
 
         return ops;
     }
-    
+
     public static Categoria getCategoria(String nome)
     {
         for (Map.Entry<Integer, Categoria> categoria : categorias.entrySet())

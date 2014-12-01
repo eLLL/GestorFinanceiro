@@ -517,14 +517,14 @@ public class Sobre extends javax.swing.JFrame {
 
     private void jMenuItem16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem16MouseClicked
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem16MouseClicked
 
     private void jMenuItem16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem16ActionPerformed
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem16ActionPerformed
@@ -620,14 +620,14 @@ public class Sobre extends javax.swing.JFrame {
 
     private void jMenuItem8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem8MouseClicked
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8MouseClicked
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed

@@ -7,6 +7,7 @@
 package dlp.view;
 
 
+import dlp.control.ModeloTabelaRelatorio;
 import dlp.control.*;
 import dlp.model.*;
 
@@ -58,7 +59,7 @@ public class RelatorioReceita extends javax.swing.JFrame {
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Relatório de Receitas", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
-        tb_relatorio.setModel(new RelatorioTableModel(TipoOperacao.RECEITA));
+        tb_relatorio.setModel(new ModeloTabelaRelatorio(TipoOperacao.RECEITA));
         jScrollPane1.setViewportView(tb_relatorio);
 
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder("Ferramentas"));
@@ -341,14 +342,14 @@ public class RelatorioReceita extends javax.swing.JFrame {
 
     private void jMenuItem8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenuItem8MouseClicked
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8MouseClicked
 
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
 
-        RelatorioReceitaDespesa frame = new RelatorioReceitaDespesa();
+        RelatorioGeral frame = new RelatorioGeral();
         frame.setVisible(true);
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem8ActionPerformed

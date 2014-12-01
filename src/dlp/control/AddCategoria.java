@@ -12,13 +12,6 @@ public class AddCategoria
         categoria.setCor(Cor.valueOf(cor));
         categoria.setTipo(tipo);
 
-        if (categoria.addBD())
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return categoria.addBD();
     }
 }
