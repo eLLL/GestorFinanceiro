@@ -21,7 +21,9 @@ public class DAO
         {
             try
             {
-                loadCategorias();
+                carregarCategorias();
+                carregarOperacoes();
+                
             } catch (SQLException ex)
             {
                 Logger.getLogger(DAO.class.getName()).log(Level.SEVERE, null, ex);
@@ -60,7 +62,7 @@ public class DAO
         return con;
     }
 
-    private void loadCategorias() throws SQLException
+    private void carregarCategorias() throws SQLException
     {
 
         String sql = String.format("SELECT * FROM categoria");
@@ -78,7 +80,10 @@ public class DAO
 
             Manager.getCategorias().put(c.getId(), c);
         }
+    }
 
+    private void carregarOperacoes() throws SQLException
+    {
         String sql2 = String.format("SELECT * FROM operacao");
 
         PreparedStatement pstmt2 = con.prepareStatement(sql2);
