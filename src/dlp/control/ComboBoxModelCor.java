@@ -1,4 +1,4 @@
-package dlp.view;
+package dlp.control;
 
 import dlp.model.Cor;
 import java.text.*;
