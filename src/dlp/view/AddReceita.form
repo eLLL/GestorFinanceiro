@@ -300,7 +300,7 @@
             <Component class="javax.swing.JComboBox" name="slct_categoria">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new dlp.control.CategoriaComboBoxModel(TipoOperacao.RECEITA)" type="code"/>
+                  <Connection code="new dlp.control.ComboBoxModelCategoria(TipoOperacao.RECEITA)" type="code"/>
                 </Property>
               </Properties>
               <Events>

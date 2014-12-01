@@ -241,7 +241,7 @@
             <Component class="javax.swing.JComboBox" name="slct_cor">
               <Properties>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-                  <Connection code="new dlp.control.CorComboBoxModel()" type="code"/>
+                  <Connection code="new dlp.control.ComboBoxModelCor()" type="code"/>
                 </Property>
               </Properties>
               <AuxValues>

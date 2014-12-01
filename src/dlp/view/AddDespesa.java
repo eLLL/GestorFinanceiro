@@ -5,7 +5,7 @@
  */
 package dlp.view;
 
-import dlp.control.CategoriaComboBoxModel;
+import dlp.control.ComboBoxModelCategoria;
 import dlp.control.*;
 import dlp.model.*;
 import javax.swing.*;
@@ -72,7 +72,7 @@ public class AddDespesa extends javax.swing.JFrame
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Informações"));
 
-        slct_categoria.setModel(new CategoriaComboBoxModel(TipoOperacao.DESPESA));
+        slct_categoria.setModel(new ComboBoxModelCategoria(TipoOperacao.DESPESA));
         slct_categoria.addPopupMenuListener(new javax.swing.event.PopupMenuListener()
         {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt)
@@ -549,7 +549,7 @@ public class AddDespesa extends javax.swing.JFrame
 
     private void slct_categoriaPopupMenuWillBecomeVisible(javax.swing.event.PopupMenuEvent evt)//GEN-FIRST:event_slct_categoriaPopupMenuWillBecomeVisible
     {//GEN-HEADEREND:event_slct_categoriaPopupMenuWillBecomeVisible
-        slct_categoria.setModel(new CategoriaComboBoxModel(TipoOperacao.DESPESA));
+        slct_categoria.setModel(new ComboBoxModelCategoria(TipoOperacao.DESPESA));
     }//GEN-LAST:event_slct_categoriaPopupMenuWillBecomeVisible
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
