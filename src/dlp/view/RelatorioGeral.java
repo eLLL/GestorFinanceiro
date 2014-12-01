@@ -57,7 +57,7 @@ public class RelatorioGeral extends javax.swing.JFrame
 
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Relatório Geral", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 18))); // NOI18N
 
-        tb_relatorio.setModel(new dlp.view.ModeloTabelaRelatorio(TipoOperacao.GERAL));
+        tb_relatorio.setModel(new dlp.control.ModeloTabelaRelatorio(TipoOperacao.GERAL));
         jScrollPane1.setViewportView(tb_relatorio);
         tb_relatorio.setDefaultRenderer(Object.class, new RenderizadorCelulaTabelaRelatorio());
 

@@ -1,6 +1,5 @@
 package dlp.control;
 
-import dlp.view.ModeloTabelaRelatorio;
 import dlp.model.*;
 import dlp.view.*;
 import java.awt.event.*;
