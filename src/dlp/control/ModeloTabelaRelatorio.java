@@ -71,7 +71,7 @@ public class ModeloTabelaRelatorio extends AbstractTableModel
         }
         else if (col == 3)
         {
-            return operacao.getData().get(Calendar.DAY_OF_MONTH) + "/" + operacao.getData().get(Calendar.MONTH) + "/" + operacao.getData().get(Calendar.YEAR);
+            return operacao.getData().get(Calendar.DAY_OF_MONTH) + "/" + (operacao.getData().get(Calendar.MONTH) + 1) + "/" + operacao.getData().get(Calendar.YEAR);
         }
         else if (col == 4)
         {
