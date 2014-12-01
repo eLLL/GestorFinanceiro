@@ -1,11 +1,12 @@
-package dlp.control;
+package dlp.view;
 
+import dlp.control.*;
 import dlp.model.*;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.*;
 
-public class RelatorioTableCellRenderer extends DefaultTableCellRenderer
+public class RenderizadorCelulaTabelaRelatorio extends DefaultTableCellRenderer
 {
 
     @Override
@@ -15,7 +16,7 @@ public class RelatorioTableCellRenderer extends DefaultTableCellRenderer
 
         if (column == 0)
         {
-            Cor cor = Manager.getOperacaoList((Integer) table.getModel().getValueAt(row, 1)).getCategoria().getCor();
+            Cor cor = Manager.getOperacao((Integer) table.getModel().getValueAt(row, 1)).getCategoria().getCor();
             c.setBackground(new Color(cor.getR(), cor.getG(), cor.getB()));
         }
         else

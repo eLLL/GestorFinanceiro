@@ -1,4 +1,4 @@
-package dlp.control;
+package dlp.view;
 
 import dlp.model.Cor;
 import java.text.*;
@@ -6,13 +6,13 @@ import java.util.*;
 import javax.swing.*;
 import javax.swing.event.*;
 
-public class CorComboBoxModel implements ComboBoxModel
+public class ComboBoxModelCor implements ComboBoxModel
 {
 
     private List<String> cores = new ArrayList<>();
     private Cor selectedCor;
 
-    public CorComboBoxModel()
+    public ComboBoxModelCor()
     {
         for (Cor cor : Cor.values())
         {

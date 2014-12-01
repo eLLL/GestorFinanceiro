@@ -5,7 +5,6 @@
  */
 package dlp.view;
 
-import dlp.control.ComboBoxModelCor;
 import dlp.control.*;
 import dlp.model.*;
 import javax.swing.*;

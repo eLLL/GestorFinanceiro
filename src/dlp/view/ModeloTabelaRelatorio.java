@@ -1,5 +1,6 @@
-package dlp.control;
+package dlp.view;
 
+import dlp.control.Manager;
 import dlp.model.*;
 import java.util.*;
 import javax.swing.table.*;
@@ -9,54 +10,54 @@ public class ModeloTabelaRelatorio extends AbstractTableModel
 
     public ModeloTabelaRelatorio(TipoOperacao tipo)
     {
-        data.addAll(Manager.getOperacaoList(tipo));
+        dados.addAll(Manager.getOperacaoList(tipo));
     }
 
-    final String[] columnNames =
+    final String[] nomesColunas =
     {
         "Cor", "ID", "Descrição", "Categoria", "Data", "Valor"
     };
-    final Class[] columnClasses =
+    final Class[] classesColunas =
     {
         Object.class, Integer.class, String.class, String.class, String.class, String.class
     };
-    final Vector data = new Vector();
+    final Vector dados = new Vector();
 
     // adds a row
     public void addOperacao(Operacao o)
     {
-        data.add(o);
-        fireTableRowsInserted(data.size() - 1, data.size() - 1);
+        dados.add(o);
+        fireTableRowsInserted(dados.size() - 1, dados.size() - 1);
     }
 
     @Override
     public int getColumnCount()
     {
-        return columnNames.length;
+        return nomesColunas.length;
     }
 
     @Override
     public int getRowCount()
     {
-        return data.size();
+        return dados.size();
     }
 
     @Override
     public String getColumnName(int col)
     {
-        return columnNames[col];
+        return nomesColunas[col];
     }
 
     @Override
     public Class getColumnClass(int c)
     {
-        return columnClasses[c];
+        return classesColunas[c];
     }
 
     @Override
     public Object getValueAt(int row, int col)
     {
-        Operacao operacao = (Operacao) data.elementAt(row);
+        Operacao operacao = (Operacao) dados.elementAt(row);
         if (col == 1)
         {
             return operacao.getId();
@@ -85,7 +86,7 @@ public class ModeloTabelaRelatorio extends AbstractTableModel
 
     public Object getValueAt(int row)
     {
-        return (Operacao) data.elementAt(row);
+        return (Operacao) dados.elementAt(row);
     }
 
     @Override
@@ -96,7 +97,7 @@ public class ModeloTabelaRelatorio extends AbstractTableModel
 
     public void removeRow(int row)
     {
-        data.remove(row);
+        dados.remove(row);
     }
 
 }

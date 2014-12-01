@@ -62,7 +62,7 @@ public class Manager
         return cats;
     }
 
-    static Operacao getOperacaoList(int id)
+    static Operacao getOperacao(Integer id)
     {
 
         for (Map.Entry<Integer, Operacao> operacao : operacoes.entrySet())
@@ -76,7 +76,6 @@ public class Manager
         }
 
         return null;
-
     }
 
     public static List<Operacao> getOperacaoList(TipoOperacao tipo)
