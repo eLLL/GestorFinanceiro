@@ -139,7 +139,7 @@ public class Operacao
         return false;
     }
 
-    public boolean removeDB()
+    public boolean removeBD()
     {
         Statement stmt = null;
         String sql = "";

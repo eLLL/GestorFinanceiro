@@ -10,7 +10,7 @@ public class RemoveOperacao
     public static boolean remove(int id)
     {
         Operacao o = Manager.getOperacaoList(id);
-        if (o.removeDB())
+        if (o.removeBD())
         {
             Menu.lb_despesas.setText("R$ " + Saldo.getDespesas());
             Menu.lb_receitas.setText("R$ " + Saldo.getReceitas());
