@@ -1,27 +1,11 @@
 package dlp.control;
 
-import dlp.model.Categoria;
-import dlp.model.Cor;
-import dlp.model.TipoOperacao;
-import dlp.view.CategoriaDespesa;
-import dlp.view.CategoriaReceita;
-import java.awt.event.ActionEvent;
-import javax.swing.JOptionPane;
+import dlp.model.*;
 
 public class AddCategoria
 {
 
-    public static void AddDespesa(ActionEvent evt)
-    {
-        add(CategoriaDespesa.txt_nome.getText(), CategoriaDespesa.slct_cor.getSelectedItem().toString().toUpperCase(), TipoOperacao.DESPESA);
-    }
-
-    public static void AddReceita(ActionEvent evt)
-    {
-        add(CategoriaReceita.txt_nome.getText(), CategoriaReceita.slct_cor.getSelectedItem().toString().toUpperCase(), TipoOperacao.RECEITA);
-    }
-
-    private static void add(String nome, String cor, TipoOperacao tipo)
+    public static boolean add(String nome, String cor, TipoOperacao tipo)
     {
         Categoria categoria = new Categoria();
         categoria.setNome(nome);
@@ -30,12 +14,11 @@ public class AddCategoria
 
         if (categoria.addBD())
         {
-            JOptionPane.showMessageDialog(null, "Categoria inserida com sucesso!");
+            return true;
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Erro ao inserir categoria!");
+            return false;
         }
     }
-
 }

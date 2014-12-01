@@ -329,7 +329,17 @@ public class CategoriaDespesa extends javax.swing.JFrame
         }
         else
         {
-            AddCategoria.AddDespesa(evt);
+            boolean adicionado = AddCategoria.add(txt_nome.getText(), slct_cor.getSelectedItem().toString().toUpperCase(), TipoOperacao.DESPESA);
+
+            if (adicionado)
+            {
+                JOptionPane.showMessageDialog(null, "Categoria inserida com sucesso!");
+                setVisible(false);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Erro ao inserir categoria!");
+            }
         }
     }//GEN-LAST:event_btn_salvarActionPerformed
 

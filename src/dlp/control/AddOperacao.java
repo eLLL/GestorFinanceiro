@@ -1,17 +1,10 @@
 package dlp.control;
 
 import dlp.model.*;
-import dlp.model.Operacao;
 import dlp.view.*;
-import dlp.view.AddDespesa;
-import dlp.view.AddReceita;
-import java.awt.event.ActionEvent;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JOptionPane;
+import java.text.*;
+import java.util.*;
+import java.util.logging.*;
 
 /**
  *
@@ -20,17 +13,7 @@ import javax.swing.JOptionPane;
 public class AddOperacao
 {
 
-    public static void addDespesa(ActionEvent evt)
-    {
-        add(AddDespesa.txt_descricao.getText(), AddDespesa.txt_valor.getText(), AddDespesa.slct_categoria.getSelectedItem().toString(), AddDespesa.txt_data.getText());
-    }
-
-    public static void addReceita(ActionEvent evt)
-    {
-        add(AddReceita.txt_descricao.getText(), AddReceita.txt_valor.getText(), AddReceita.slct_categoria.getSelectedItem().toString(), AddReceita.txt_data.getText());
-    }
-
-    private static void add(String descricao, String valor, String categoria, String data)
+    public static boolean add(String descricao, String valor, String categoria, String data)
     {
         Operacao operacao = new Operacao();
 
@@ -55,11 +38,11 @@ public class AddOperacao
             Menu.lb_receitas.setText("R$ " + Saldo.getReceitas());
             Menu.lb_saldoAcumulado.setText("R$ " + Saldo.getMontante());
 
-            JOptionPane.showMessageDialog(null, "Operação adicionada com sucesso!");
+            return true;
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Erro ao adicionar operação");
+            return false;
         }
     }
 

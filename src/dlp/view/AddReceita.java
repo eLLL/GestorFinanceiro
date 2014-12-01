@@ -393,13 +393,23 @@ public class AddReceita extends javax.swing.JFrame
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void btn_salvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_salvarActionPerformed
-        if (!txt_data.getText().equals("") || !txt_descricao.getText().equals("") || !txt_valor.getText().equals(""))
+        if (txt_data.getText().equals("") || txt_descricao.getText().equals("") || txt_valor.getText().equals(""))
         {
-            AddOperacao.addReceita(evt);
+            JOptionPane.showMessageDialog(null, "Os campos não podem estar vazios!");
         }
         else
         {
-            JOptionPane.showMessageDialog(null, "Os campos não podem estar fazios!");
+            boolean inserido = AddOperacao.add(txt_descricao.getText(), txt_valor.getText(), slct_categoria.getSelectedItem().toString(), txt_data.getText());
+
+            if (inserido)
+            {
+                JOptionPane.showMessageDialog(null, "Operação adicionada com sucesso!");
+                setVisible(false);
+            }
+            else
+            {
+                JOptionPane.showMessageDialog(null, "Erro ao adicionar operação");
+            }
         }
     }//GEN-LAST:event_btn_salvarActionPerformed
 
