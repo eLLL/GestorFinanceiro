@@ -1,4 +1,4 @@
-package dlp.view;
+package dlp.control;
 
 import dlp.control.*;
 import dlp.model.*;

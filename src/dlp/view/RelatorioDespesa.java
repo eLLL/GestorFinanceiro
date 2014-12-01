@@ -5,6 +5,7 @@
  */
 package dlp.view;
 
+import dlp.control.RenderizadorCelulaTabelaRelatorio;
 import dlp.control.*;
 import dlp.model.*;
 
