@@ -8,6 +8,7 @@ package dlp.view;
 import dlp.control.ComboBoxModelCategoria;
 import dlp.control.*;
 import dlp.model.*;
+import java.util.*;
 import javax.swing.*;
 
 /**
@@ -72,7 +73,7 @@ public class AddDespesa extends javax.swing.JFrame
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Informações"));
 
-        slct_categoria.setModel(new ComboBoxModelCategoria(TipoOperacao.DESPESA));
+        slct_categoria.setModel(new dlp.control.ComboBoxModelCategoria(TipoOperacao.DESPESA));
         slct_categoria.addPopupMenuListener(new javax.swing.event.PopupMenuListener()
         {
             public void popupMenuCanceled(javax.swing.event.PopupMenuEvent evt)
@@ -105,6 +106,13 @@ public class AddDespesa extends javax.swing.JFrame
         jLabel11.setText("Categoria");
 
         txt_valor.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.NumberFormatter(new java.text.DecimalFormat("#0.00"))));
+        txt_valor.addFocusListener(new java.awt.event.FocusAdapter()
+        {
+            public void focusLost(java.awt.event.FocusEvent evt)
+            {
+                txt_valorFocusLost(evt);
+            }
+        });
         txt_valor.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
@@ -114,6 +122,7 @@ public class AddDespesa extends javax.swing.JFrame
         });
 
         txt_data.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter()));
+        txt_data.setText(getDate());
         txt_data.addActionListener(new java.awt.event.ActionListener()
         {
             public void actionPerformed(java.awt.event.ActionEvent evt)
@@ -552,6 +561,19 @@ public class AddDespesa extends javax.swing.JFrame
         slct_categoria.setModel(new ComboBoxModelCategoria(TipoOperacao.DESPESA));
     }//GEN-LAST:event_slct_categoriaPopupMenuWillBecomeVisible
 
+    private void txt_valorFocusLost(java.awt.event.FocusEvent evt)//GEN-FIRST:event_txt_valorFocusLost
+    {//GEN-HEADEREND:event_txt_valorFocusLost
+        txt_valor.setText(txt_valor.getText().replace("-", ""));
+    }//GEN-LAST:event_txt_valorFocusLost
+
+    public String getDate(){
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH)+1;
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+        return (day + "/" + month + "/" + year);
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btn_cancelar;
     private javax.swing.JButton btn_salvar;
