@@ -92,7 +92,8 @@ public class DAO
         } catch (SQLException ex)
         {
             ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Erro ao fazer conexão com o banco de dados");
+            JOptionPane.showMessageDialog(null, "Erro ao fazer conexão com o banco de dados.");
+            JOptionPane.showMessageDialog(null, "É necessário ter instalado o PostgreSQL.");
         }
         return false;
     }
